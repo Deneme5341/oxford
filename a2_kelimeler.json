@@ -1,0 +1,2516 @@
+[
+  {
+    "kelime": "ability",
+    "tip": "n.",
+    "anlam": "yetenek, beceri",
+    "ornek_cumle": "She has the ability to learn new languages quickly."
+  },
+  {
+    "kelime": "able",
+    "tip": "adj.",
+    "anlam": "yapabilen, muktedir",
+    "ornek_cumle": "I am not able to help you right now."
+  },
+  {
+    "kelime": "abroad",
+    "tip": "adv.",
+    "anlam": "yurt dışı",
+    "ornek_cumle": "He lives and works abroad."
+  },
+  {
+    "kelime": "accept",
+    "tip": "v.",
+    "anlam": "kabul etmek",
+    "ornek_cumle": "Did they accept your invitation?"
+  },
+  {
+    "kelime": "accident",
+    "tip": "n.",
+    "anlam": "kaza",
+    "ornek_cumle": "She hurt her leg in an accident."
+  },
+  {
+    "kelime": "according to",
+    "tip": "prep.",
+    "anlam": "-e göre",
+    "ornek_cumle": "According to the news, it will rain tomorrow."
+  },
+  {
+    "kelime": "achieve",
+    "tip": "v.",
+    "anlam": "başarmak, elde etmek",
+    "ornek_cumle": "You must work hard to achieve your goals."
+  },
+  {
+    "kelime": "act",
+    "tip": "v.",
+    "anlam": "rol yapmak, davranmak",
+    "ornek_cumle": "He acted surprised when he heard the news."
+  },
+  {
+    "kelime": "active",
+    "tip": "adj.",
+    "anlam": "aktif, hareketli",
+    "ornek_cumle": "It is important to lead an active lifestyle."
+  },
+  {
+    "kelime": "actually",
+    "tip": "adv.",
+    "anlam": "aslında, gerçekten",
+    "ornek_cumle": "I thought he was angry, but actually he was just tired."
+  },
+  {
+    "kelime": "adult",
+    "tip": "adj.",
+    "anlam": "yetişkin (sıfat)",
+    "ornek_cumle": "This magazine is for an adult audience."
+  },
+  {
+    "kelime": "advantage",
+    "tip": "n.",
+    "anlam": "avantaj",
+    "ornek_cumle": "Speaking two languages is a great advantage."
+  },
+  {
+    "kelime": "adventure",
+    "tip": "n.",
+    "anlam": "macera",
+    "ornek_cumle": "She wrote a book about her adventures in Asia."
+  },
+  {
+    "kelime": "advertise",
+    "tip": "v.",
+    "anlam": "reklam yapmak",
+    "ornek_cumle": "They decided to advertise the job in the newspaper."
+  },
+  {
+    "kelime": "advertisement",
+    "tip": "n.",
+    "anlam": "reklam, ilan",
+    "ornek_cumle": "Did you see the advertisement for the new phone?"
+  },
+  {
+    "kelime": "advertising",
+    "tip": "n.",
+    "anlam": "reklamcılık",
+    "ornek_cumle": "The company spends a lot on advertising."
+  },
+  {
+    "kelime": "affect",
+    "tip": "v.",
+    "anlam": "etkilemek",
+    "ornek_cumle": "The cold weather affected the plants."
+  },
+  {
+    "kelime": "after",
+    "tip": "conj., adv.",
+    "anlam": "-den sonra (bağlaç/zarf)",
+    "ornek_cumle": "We went home after the film finished."
+  },
+  {
+    "kelime": "against",
+    "tip": "prep.",
+    "anlam": "karşı",
+    "ornek_cumle": "He played against the champion."
+  },
+  {
+    "kelime": "ah",
+    "tip": "exclam.",
+    "anlam": "ah, anladım (ünlem)",
+    "ornek_cumle": "Ah, that's why you were late!"
+  },
+  {
+    "kelime": "airline",
+    "tip": "n.",
+    "anlam": "hava yolu şirketi",
+    "ornek_cumle": "Which airline are you flying with?"
+  },
+  {
+    "kelime": "alive",
+    "tip": "adj.",
+    "anlam": "canlı, sağ",
+    "ornek_cumle": "The doctors kept him alive."
+  },
+  {
+    "kelime": "all",
+    "tip": "adv.",
+    "anlam": "tamamen, bütünüyle",
+    "ornek_cumle": "The cake was all gone."
+  },
+  {
+    "kelime": "all right",
+    "tip": "adj./adv., exclam.",
+    "anlam": "tamam, iyi, yolunda",
+    "ornek_cumle": "Are you all right? Yes, everything is all right."
+  },
+  {
+    "kelime": "allow",
+    "tip": "v.",
+    "anlam": "izin vermek",
+    "ornek_cumle": "My parents don't allow me to stay out late."
+  },
+  {
+    "kelime": "almost",
+    "tip": "adv.",
+    "anlam": "neredeyse",
+    "ornek_cumle": "I am almost finished with my homework."
+  },
+  {
+    "kelime": "alone",
+    "tip": "adj./adv.",
+    "anlam": "yalnız",
+    "ornek_cumle": "I prefer to work alone."
+  },
+  {
+    "kelime": "along",
+    "tip": "prep., adv.",
+    "anlam": "boyunca",
+    "ornek_cumle": "We walked along the river."
+  },
+  {
+    "kelime": "already",
+    "tip": "adv.",
+    "anlam": "zaten",
+    "ornek_cumle": "I have already seen that movie."
+  },
+  {
+    "kelime": "alternative",
+    "tip": "n.",
+    "anlam": "alternatif",
+    "ornek_cumle": "Is there an alternative route?"
+  },
+  {
+    "kelime": "although",
+    "tip": "conj.",
+    "anlam": "olmasına rağmen",
+    "ornek_cumle": "Although it was cold, we went swimming."
+  },
+  {
+    "kelime": "among",
+    "tip": "prep.",
+    "anlam": "arasında (çok şeyin)",
+    "ornek_cumle": "She was popular among her friends."
+  },
+  {
+    "kelime": "amount",
+    "tip": "n.",
+    "anlam": "miktar",
+    "ornek_cumle": "They spent a large amount of money."
+  },
+  {
+    "kelime": "ancient",
+    "tip": "adj.",
+    "anlam": "antik, kadim",
+    "ornek_cumle": "We visited an ancient castle."
+  },
+  {
+    "kelime": "ankle",
+    "tip": "n.",
+    "anlam": "ayak bileği",
+    "ornek_cumle": "I twisted my ankle playing tennis."
+  },
+  {
+    "kelime": "any",
+    "tip": "adv.",
+    "anlam": "hiç (zarf)",
+    "ornek_cumle": "Does it hurt any more?"
+  },
+  {
+    "kelime": "anybody",
+    "tip": "pron.",
+    "anlam": "herhangi biri",
+    "ornek_cumle": "Did anybody see what happened?"
+  },
+  {
+    "kelime": "any more",
+    "tip": "adv.",
+    "anlam": "artık, daha fazla değil",
+    "ornek_cumle": "I don't live there any more."
+  },
+  {
+    "kelime": "anyway",
+    "tip": "adv.",
+    "anlam": "her neyse, zaten",
+    "ornek_cumle": "I didn't want to go, and anyway, I was too busy."
+  },
+  {
+    "kelime": "anywhere",
+    "tip": "adv., pron.",
+    "anlam": "herhangi bir yer",
+    "ornek_cumle": "I can't find my keys anywhere."
+  },
+  {
+    "kelime": "app",
+    "tip": "n.",
+    "anlam": "uygulama",
+    "ornek_cumle": "I downloaded a new app on my phone."
+  },
+  {
+    "kelime": "appear",
+    "tip": "v.",
+    "anlam": "görünmek, ortaya çıkmak",
+    "ornek_cumle": "A small animal appeared from the bushes."
+  },
+  {
+    "kelime": "appearance",
+    "tip": "n.",
+    "anlam": "görünüş, dış görünüş",
+    "ornek_cumle": "His sudden appearance surprised everyone."
+  },
+  {
+    "kelime": "apply",
+    "tip": "v.",
+    "anlam": "başvurmak, uygulamak",
+    "ornek_cumle": "I decided to apply for the job."
+  },
+  {
+    "kelime": "architect",
+    "tip": "n.",
+    "anlam": "mimar",
+    "ornek_cumle": "The architect designed a beautiful house."
+  },
+  {
+    "kelime": "architecture",
+    "tip": "n.",
+    "anlam": "mimari",
+    "ornek_cumle": "I love the architecture of old buildings."
+  },
+  {
+    "kelime": "argue",
+    "tip": "v.",
+    "anlam": "tartışmak, çekişmek",
+    "ornek_cumle": "They often argue about money."
+  },
+  {
+    "kelime": "argument",
+    "tip": "n.",
+    "anlam": "tartışma",
+    "ornek_cumle": "We had a long argument about politics."
+  },
+  {
+    "kelime": "army",
+    "tip": "n.",
+    "anlam": "ordu",
+    "ornek_cumle": "He joined the army when he was young."
+  },
+  {
+    "kelime": "arrange",
+    "tip": "v.",
+    "anlam": "düzenlemek, ayarlamak",
+    "ornek_cumle": "I need to arrange a meeting with the team."
+  },
+  {
+    "kelime": "arrangement",
+    "tip": "n.",
+    "anlam": "düzenleme, anlaşma",
+    "ornek_cumle": "We made arrangements to meet next week."
+  },
+  {
+    "kelime": "as",
+    "tip": "adv., conj.",
+    "anlam": "-dığı zaman, iken",
+    "ornek_cumle": "As I walked home, it started to rain."
+  },
+  {
+    "kelime": "asleep",
+    "tip": "adj.",
+    "anlam": "uykuda",
+    "ornek_cumle": "The baby is fast asleep."
+  },
+  {
+    "kelime": "assistant",
+    "tip": "n., adj.",
+    "anlam": "asistan, yardımcı",
+    "ornek_cumle": "She works as a sales assistant."
+  },
+  {
+    "kelime": "athlete",
+    "tip": "n.",
+    "anlam": "atlet, sporcu",
+    "ornek_cumle": "The Olympics feature many talented athletes."
+  },
+  {
+    "kelime": "attack",
+    "tip": "n., v.",
+    "anlam": "saldırı, saldırmak",
+    "ornek_cumle": "They planned a surprise attack."
+  },
+  {
+    "kelime": "attend",
+    "tip": "v.",
+    "anlam": "katılmak, devam etmek",
+    "ornek_cumle": "She attends university classes every day."
+  },
+  {
+    "kelime": "attention",
+    "tip": "n., exclam.",
+    "anlam": "dikkat, ilgi",
+    "ornek_cumle": "Pay attention to the signs. Attention!"
+  },
+  {
+    "kelime": "attractive",
+    "tip": "adj.",
+    "anlam": "çekici",
+    "ornek_cumle": "She is a very attractive woman."
+  },
+  {
+    "kelime": "audience",
+    "tip": "n.",
+    "anlam": "izleyici, dinleyici kitlesi",
+    "ornek_cumle": "The audience clapped loudly."
+  },
+  {
+    "kelime": "author",
+    "tip": "n.",
+    "anlam": "yazar",
+    "ornek_cumle": "Who is the author of this book?"
+  },
+  {
+    "kelime": "available",
+    "tip": "adj.",
+    "anlam": "mevcut, müsait",
+    "ornek_cumle": "This product is available in all stores."
+  },
+  {
+    "kelime": "average",
+    "tip": "adj., n.",
+    "anlam": "ortalama",
+    "ornek_cumle": "The average temperature in summer is high."
+  },
+  {
+    "kelime": "avoid",
+    "tip": "v.",
+    "anlam": "kaçınmak, önlemek",
+    "ornek_cumle": "Try to avoid eating junk food."
+  },
+  {
+    "kelime": "award",
+    "tip": "n.",
+    "anlam": "ödül",
+    "ornek_cumle": "He won an award for his painting."
+  },
+  {
+    "kelime": "awful",
+    "tip": "adj.",
+    "anlam": "korkunç, berbat",
+    "ornek_cumle": "The weather was awful yesterday."
+  },
+  {
+    "kelime": "back",
+    "tip": "adj.",
+    "anlam": "arka, geçmişteki",
+    "ornek_cumle": "The back door was open."
+  },
+  {
+    "kelime": "background",
+    "tip": "n.",
+    "anlam": "arka plan",
+    "ornek_cumle": "I need to change my computer's background."
+  },
+  {
+    "kelime": "badly",
+    "tip": "adv.",
+    "anlam": "kötü bir şekilde",
+    "ornek_cumle": "He played badly in the match."
+  },
+  {
+    "kelime": "bar",
+    "tip": "n.",
+    "anlam": "bar, çubuk",
+    "ornek_cumle": "We met in a bar near the station."
+  },
+  {
+    "kelime": "baseball",
+    "tip": "n.",
+    "anlam": "beyzbol",
+    "ornek_cumle": "Baseball is popular in the USA."
+  },
+  {
+    "kelime": "based",
+    "tip": "adj.",
+    "anlam": "merkezli, dayalı",
+    "ornek_cumle": "The film is based on a true story."
+  },
+  {
+    "kelime": "basketball",
+    "tip": "n.",
+    "anlam": "basketbol",
+    "ornek_cumle": "I enjoy watching basketball games."
+  },
+  {
+    "kelime": "bean",
+    "tip": "n.",
+    "anlam": "fasulye, bakla",
+    "ornek_cumle": "We planted some bean seeds in the garden."
+  },
+  {
+    "kelime": "bear (animal)",
+    "tip": "n.",
+    "anlam": "ayı",
+    "ornek_cumle": "Bears hibernate in winter."
+  },
+  {
+    "kelime": "beat",
+    "tip": "v.",
+    "anlam": "yenmek, vurmak",
+    "ornek_cumle": "Our team beat them 3-1."
+  },
+  {
+    "kelime": "beef",
+    "tip": "n.",
+    "anlam": "dana eti",
+    "ornek_cumle": "I ordered a beef steak."
+  },
+  {
+    "kelime": "before",
+    "tip": "conj., adv.",
+    "anlam": "-den önce (bağlaç/zarf)",
+    "ornek_cumle": "She left before I arrived."
+  },
+  {
+    "kelime": "behave",
+    "tip": "v.",
+    "anlam": "davranmak",
+    "ornek_cumle": "Please behave in the library."
+  },
+  {
+    "kelime": "behaviour",
+    "tip": "n.",
+    "anlam": "davranış",
+    "ornek_cumle": "His behaviour was unacceptable."
+  },
+  {
+    "kelime": "belong",
+    "tip": "v.",
+    "anlam": "ait olmak",
+    "ornek_cumle": "This book belongs to me."
+  },
+  {
+    "kelime": "belt",
+    "tip": "n.",
+    "anlam": "kemer",
+    "ornek_cumle": "I need to wear a belt with these trousers."
+  },
+  {
+    "kelime": "benefit",
+    "tip": "n.",
+    "anlam": "fayda, yarar",
+    "ornek_cumle": "The new scheme will benefit everyone."
+  },
+  {
+    "kelime": "best",
+    "tip": "adv., n.",
+    "anlam": "en iyi şekilde, en iyisi",
+    "ornek_cumle": "He played his best. Try to do your best."
+  },
+  {
+    "kelime": "better",
+    "tip": "adv.",
+    "anlam": "daha iyi bir şekilde",
+    "ornek_cumle": "She sings better than anyone else."
+  },
+  {
+    "kelime": "between",
+    "tip": "adv.",
+    "anlam": "arada",
+    "ornek_cumle": "The space between the cars was very small."
+  },
+  {
+    "kelime": "billion",
+    "tip": "number",
+    "anlam": "milyar",
+    "ornek_cumle": "The company is worth over a billion dollars."
+  },
+  {
+    "kelime": "bin",
+    "tip": "n.",
+    "anlam": "çöp kutusu",
+    "ornek_cumle": "Put the rubbish in the bin."
+  },
+  {
+    "kelime": "biology",
+    "tip": "n.",
+    "anlam": "biyoloji",
+    "ornek_cumle": "I study biology at school."
+  },
+  {
+    "kelime": "birth",
+    "tip": "n.",
+    "anlam": "doğum",
+    "ornek_cumle": "The baby's date of birth is July 1st."
+  },
+  {
+    "kelime": "biscuit",
+    "tip": "n.",
+    "anlam": "bisküvi",
+    "ornek_cumle": "Would you like a cup of tea and a biscuit?"
+  },
+  {
+    "kelime": "bit",
+    "tip": "n.",
+    "anlam": "biraz, küçük parça",
+    "ornek_cumle": "Can I have a bit of cake?"
+  },
+  {
+    "kelime": "blank",
+    "tip": "adj., n.",
+    "anlam": "boş, boşluk",
+    "ornek_cumle": "The page was totally blank. Fill in the blanks."
+  },
+  {
+    "kelime": "blood",
+    "tip": "n.",
+    "anlam": "kan",
+    "ornek_cumle": "He lost a lot of blood in the accident."
+  },
+  {
+    "kelime": "blow",
+    "tip": "v.",
+    "anlam": "esmek, üflemek",
+    "ornek_cumle": "The wind is blowing strongly."
+  },
+  {
+    "kelime": "board",
+    "tip": "n.",
+    "anlam": "tahta, pano",
+    "ornek_cumle": "The teacher wrote on the board."
+  },
+  {
+    "kelime": "boil",
+    "tip": "v.",
+    "anlam": "kaynamak, kaynatmak",
+    "ornek_cumle": "Boil the water before making tea."
+  },
+  {
+    "kelime": "bone",
+    "tip": "n.",
+    "anlam": "kemik",
+    "ornek_cumle": "The dog buried a bone in the garden."
+  },
+  {
+    "kelime": "book",
+    "tip": "v.",
+    "anlam": "yer ayırtmak, rezervasyon yapmak",
+    "ornek_cumle": "I booked a table at the restaurant."
+  },
+  {
+    "kelime": "borrow",
+    "tip": "v.",
+    "anlam": "ödünç almak",
+    "ornek_cumle": "Can I borrow your pen for a minute?"
+  },
+  {
+    "kelime": "boss",
+    "tip": "n.",
+    "anlam": "patron, amir",
+    "ornek_cumle": "My boss gave me a raise."
+  },
+  {
+    "kelime": "bottom",
+    "tip": "n., adj.",
+    "anlam": "alt, dip",
+    "ornek_cumle": "Look at the bottom of the page."
+  },
+  {
+    "kelime": "bowl",
+    "tip": "n.",
+    "anlam": "kase",
+    "ornek_cumle": "I ate a bowl of soup."
+  },
+  {
+    "kelime": "brain",
+    "tip": "n.",
+    "anlam": "beyin",
+    "ornek_cumle": "The brain controls the body."
+  },
+  {
+    "kelime": "bridge",
+    "tip": "n.",
+    "anlam": "köprü",
+    "ornek_cumle": "We drove across a long bridge."
+  },
+  {
+    "kelime": "bright",
+    "tip": "adj.",
+    "anlam": "parlak, zeki",
+    "ornek_cumle": "The sun is very bright today. She is a bright student."
+  },
+  {
+    "kelime": "brilliant",
+    "tip": "adj.",
+    "anlam": "parlak, zekice, harika",
+    "ornek_cumle": "That was a brilliant idea!"
+  },
+  {
+    "kelime": "broken",
+    "tip": "adj.",
+    "anlam": "kırık",
+    "ornek_cumle": "The chair is broken."
+  },
+  {
+    "kelime": "brush",
+    "tip": "v., n.",
+    "anlam": "fırçalamak, fırça",
+    "ornek_cumle": "Don't forget to brush your teeth."
+  },
+  {
+    "kelime": "burn",
+    "tip": "v.",
+    "anlam": "yanmak, yakmak",
+    "ornek_cumle": "Be careful not to burn the toast."
+  },
+  {
+    "kelime": "businessman",
+    "tip": "n.",
+    "anlam": "iş adamı",
+    "ornek_cumle": "He is a successful businessman."
+  },
+  {
+    "kelime": "button",
+    "tip": "n.",
+    "anlam": "düğme",
+    "ornek_cumle": "Push the button to start the machine."
+  },
+  {
+    "kelime": "camp",
+    "tip": "n., v.",
+    "anlam": "kamp, kamp yapmak",
+    "ornek_cumle": "We set up camp by the river. We are going to camp this weekend."
+  },
+  {
+    "kelime": "camping",
+    "tip": "n.",
+    "anlam": "kampçılık",
+    "ornek_cumle": "Camping is a great way to enjoy nature."
+  },
+  {
+    "kelime": "can",
+    "tip": "n.",
+    "anlam": "konserve kutusu, teneke kutu",
+    "ornek_cumle": "I bought a can of beans."
+  },
+  {
+    "kelime": "care",
+    "tip": "n., v.",
+    "anlam": "özen, bakım, umursamak",
+    "ornek_cumle": "Take care of yourself. I don't care about the price."
+  },
+  {
+    "kelime": "careful",
+    "tip": "adj.",
+    "anlam": "dikkatli",
+    "ornek_cumle": "Be careful when crossing the street."
+  },
+  {
+    "kelime": "carefully",
+    "tip": "adv.",
+    "anlam": "dikkatlice",
+    "ornek_cumle": "She listened carefully to the instructions."
+  },
+  {
+    "kelime": "carpet",
+    "tip": "n.",
+    "anlam": "halı, kilim",
+    "ornek_cumle": "There is a beautiful carpet in the living room."
+  },
+  {
+    "kelime": "cartoon",
+    "tip": "n.",
+    "anlam": "çizgi film",
+    "ornek_cumle": "My little brother loves watching cartoons."
+  },
+  {
+    "kelime": "case",
+    "tip": "n.",
+    "anlam": "durum, vaka, dava",
+    "ornek_cumle": "In case of emergency, call this number. This is a simple case."
+  },
+  {
+    "kelime": "cash",
+    "tip": "n.",
+    "anlam": "nakit para",
+    "ornek_cumle": "I paid in cash."
+  },
+  {
+    "kelime": "castle",
+    "tip": "n.",
+    "anlam": "kale",
+    "ornek_cumle": "We visited an old castle on the hill."
+  },
+  {
+    "kelime": "catch",
+    "tip": "v.",
+    "anlam": "yakalamak, yetişmek (otobüse vb.)",
+    "ornek_cumle": "I need to catch the 8 o'clock train."
+  },
+  {
+    "kelime": "cause",
+    "tip": "n., v.",
+    "anlam": "neden, sebep olmak",
+    "ornek_cumle": "Smoking is the cause of many health problems."
+  },
+  {
+    "kelime": "celebrate",
+    "tip": "v.",
+    "anlam": "kutlamak",
+    "ornek_cumle": "We are going to celebrate my birthday on Saturday."
+  },
+  {
+    "kelime": "celebrity",
+    "tip": "n.",
+    "anlam": "ünlü (kişi)",
+    "ornek_cumle": "A famous celebrity attended the party."
+  },
+  {
+    "kelime": "certain",
+    "tip": "adj.",
+    "anlam": "kesin, belli",
+    "ornek_cumle": "I am certain that he is telling the truth."
+  },
+  {
+    "kelime": "certainly",
+    "tip": "adv.",
+    "anlam": "kesinlikle",
+    "ornek_cumle": "Yes, I can certainly help you."
+  },
+  {
+    "kelime": "chance",
+    "tip": "n.",
+    "anlam": "şans, fırsat",
+    "ornek_cumle": "I didn't get a chance to talk to her."
+  },
+  {
+    "kelime": "character",
+    "tip": "n.",
+    "anlam": "karakter, kişilik",
+    "ornek_cumle": "He has a very strong character. Who is your favourite character in the book?"
+  },
+  {
+    "kelime": "charity",
+    "tip": "n.",
+    "anlam": "hayır kurumu, yardım",
+    "ornek_cumle": "She often donates money to charity."
+  },
+  {
+    "kelime": "chat",
+    "tip": "v., n.",
+    "anlam": "sohbet etmek, sohbet",
+    "ornek_cumle": "We chatted for an hour in the café."
+  },
+  {
+    "kelime": "check",
+    "tip": "n.",
+    "anlam": "kontrol, çek",
+    "ornek_cumle": "We need to do a final check before we leave."
+  },
+  {
+    "kelime": "chef",
+    "tip": "n.",
+    "anlam": "şef, aşçıbaşı",
+    "ornek_cumle": "The chef prepared a special meal."
+  },
+  {
+    "kelime": "chemistry",
+    "tip": "n.",
+    "anlam": "kimya",
+    "ornek_cumle": "I find chemistry very difficult."
+  },
+  {
+    "kelime": "chip",
+    "tip": "n.",
+    "anlam": "cips, patates kızartması",
+    "ornek_cumle": "I ordered fish and chips."
+  },
+  {
+    "kelime": "choice",
+    "tip": "n.",
+    "anlam": "seçim, tercih",
+    "ornek_cumle": "You have a choice between coffee and tea."
+  },
+  {
+    "kelime": "church",
+    "tip": "n.",
+    "anlam": "kilise",
+    "ornek_cumle": "We visited an old church in the village."
+  },
+  {
+    "kelime": "cigarette",
+    "tip": "n.",
+    "anlam": "sigara",
+    "ornek_cumle": "Smoking a cigarette is bad for your health."
+  },
+  {
+    "kelime": "circle",
+    "tip": "n., v.",
+    "anlam": "daire, çevrelemek",
+    "ornek_cumle": "Draw a circle on the paper."
+  },
+  {
+    "kelime": "classical",
+    "tip": "adj.",
+    "anlam": "klasik",
+    "ornek_cumle": "I enjoy listening to classical music."
+  },
+  {
+    "kelime": "clear",
+    "tip": "adj.",
+    "anlam": "açık, net",
+    "ornek_cumle": "The instructions were clear and easy to follow."
+  },
+  {
+    "kelime": "clearly",
+    "tip": "adv.",
+    "anlam": "açıkça, net bir şekilde",
+    "ornek_cumle": "She spoke clearly so everyone could understand."
+  },
+  {
+    "kelime": "clever",
+    "tip": "adj.",
+    "anlam": "zeki, akıllı",
+    "ornek_cumle": "He is a very clever boy."
+  },
+  {
+    "kelime": "climate",
+    "tip": "n.",
+    "anlam": "iklim",
+    "ornek_cumle": "The climate in this region is very mild."
+  },
+  {
+    "kelime": "close²",
+    "tip": "adj.",
+    "anlam": "yakın",
+    "ornek_cumle": "We live close to the city center."
+  },
+  {
+    "kelime": "closed",
+    "tip": "adj.",
+    "anlam": "kapalı",
+    "ornek_cumle": "The shop is closed on Sundays."
+  },
+  {
+    "kelime": "clothing",
+    "tip": "n.",
+    "anlam": "giyim, kıyafet",
+    "ornek_cumle": "Wear warm clothing in winter."
+  },
+  {
+    "kelime": "cloud",
+    "tip": "n.",
+    "anlam": "bulut",
+    "ornek_cumle": "The sky is full of dark clouds."
+  },
+  {
+    "kelime": "coach",
+    "tip": "n.",
+    "anlam": "antrenör, otobüs (uzun yol)",
+    "ornek_cumle": "Our football coach is very strict."
+  },
+  {
+    "kelime": "coast",
+    "tip": "n.",
+    "anlam": "kıyı, sahil",
+    "ornek_cumle": "We spent our holiday on the coast."
+  },
+  {
+    "kelime": "code",
+    "tip": "n.",
+    "anlam": "kod, kural",
+    "ornek_cumle": "Enter your security code to access the building."
+  },
+  {
+    "kelime": "colleague",
+    "tip": "n.",
+    "anlam": "iş arkadaşı, meslektaş",
+    "ornek_cumle": "I went to lunch with a colleague."
+  },
+  {
+    "kelime": "collect",
+    "tip": "v.",
+    "anlam": "toplamak, koleksiyon yapmak",
+    "ornek_cumle": "She collects old stamps."
+  },
+  {
+    "kelime": "column",
+    "tip": "n.",
+    "anlam": "sütun, kolon",
+    "ornek_cumle": "The newspaper article was in the third column."
+  },
+  {
+    "kelime": "comedy",
+    "tip": "n.",
+    "anlam": "komedi",
+    "ornek_cumle": "We watched a new comedy on TV."
+  },
+  {
+    "kelime": "comfortable",
+    "tip": "adj.",
+    "anlam": "rahat, konforlu",
+    "ornek_cumle": "The sofa is very comfortable."
+  },
+  {
+    "kelime": "comment",
+    "tip": "n.",
+    "anlam": "yorum",
+    "ornek_cumle": "She made a useful comment about my work."
+  },
+  {
+    "kelime": "communicate",
+    "tip": "v.",
+    "anlam": "iletişim kurmak",
+    "ornek_cumle": "We communicate mainly by email."
+  },
+  {
+    "kelime": "community",
+    "tip": "n.",
+    "anlam": "topluluk, cemaat",
+    "ornek_cumle": "She is active in the local community."
+  },
+  {
+    "kelime": "compete",
+    "tip": "v.",
+    "anlam": "yarışmak",
+    "ornek_cumle": "They are competing for the gold medal."
+  },
+  {
+    "kelime": "competition",
+    "tip": "n.",
+    "anlam": "yarışma",
+    "ornek_cumle": "He entered a singing competition."
+  },
+  {
+    "kelime": "complain",
+    "tip": "v.",
+    "anlam": "şikayet etmek",
+    "ornek_cumle": "The customers complained about the slow service."
+  },
+  {
+    "kelime": "completely",
+    "tip": "adv.",
+    "anlam": "tamamen, bütünüyle",
+    "ornek_cumle": "I completely forgot about the meeting."
+  },
+  {
+    "kelime": "condition",
+    "tip": "n.",
+    "anlam": "durum, şart, koşul",
+    "ornek_cumle": "The car is in excellent condition. He suffers from a medical condition."
+  },
+  {
+    "kelime": "conference",
+    "tip": "n.",
+    "anlam": "konferans",
+    "ornek_cumle": "I attended a conference in Berlin."
+  },
+  {
+    "kelime": "connect",
+    "tip": "v.",
+    "anlam": "bağlamak, bağlanmak",
+    "ornek_cumle": "Can you connect this wire to the TV?"
+  },
+  {
+    "kelime": "connected",
+    "tip": "adj.",
+    "anlam": "bağlı",
+    "ornek_cumle": "We are connected to the internet."
+  },
+  {
+    "kelime": "consider",
+    "tip": "v.",
+    "anlam": "düşünmek, hesaba katmak",
+    "ornek_cumle": "I considered moving to a different city."
+  },
+  {
+    "kelime": "contain",
+    "tip": "v.",
+    "anlam": "içermek",
+    "ornek_cumle": "This box contains old photographs."
+  },
+  {
+    "kelime": "context",
+    "tip": "n.",
+    "anlam": "bağlam, içerik",
+    "ornek_cumle": "You can understand the word from the context."
+  },
+  {
+    "kelime": "continent",
+    "tip": "n.",
+    "anlam": "kıta",
+    "ornek_cumle": "Africa is the second largest continent."
+  },
+  {
+    "kelime": "continue",
+    "tip": "v.",
+    "anlam": "devam etmek",
+    "ornek_cumle": "The rain continued all night."
+  },
+  {
+    "kelime": "control",
+    "tip": "n., v.",
+    "anlam": "kontrol, kontrol etmek",
+    "ornek_cumle": "She lost control of the car. I can control my emotions."
+  },
+  {
+    "kelime": "cook",
+    "tip": "n.",
+    "anlam": "aşçı",
+    "ornek_cumle": "He works as a cook in a small hotel."
+  },
+  {
+    "kelime": "cooker",
+    "tip": "n.",
+    "anlam": "ocak, fırın",
+    "ornek_cumle": "We bought a new electric cooker."
+  },
+  {
+    "kelime": "copy",
+    "tip": "n., v.",
+    "anlam": "kopya, kopyalamak",
+    "ornek_cumle": "Make a copy of the key. Please copy this file."
+  },
+  {
+    "kelime": "corner",
+    "tip": "n.",
+    "anlam": "köşe",
+    "ornek_cumle": "The post office is on the corner of the street."
+  },
+  {
+    "kelime": "correctly",
+    "tip": "adv.",
+    "anlam": "doğru bir şekilde",
+    "ornek_cumle": "I answered all the questions correctly."
+  },
+  {
+    "kelime": "count",
+    "tip": "v.",
+    "anlam": "saymak",
+    "ornek_cumle": "Can you count to twenty in English?"
+  },
+  {
+    "kelime": "couple",
+    "tip": "n.",
+    "anlam": "çift, birkaç",
+    "ornek_cumle": "A young couple got married. I need a couple of days to finish."
+  },
+  {
+    "kelime": "cover",
+    "tip": "v.",
+    "anlam": "kaplamak, örtmek",
+    "ornek_cumle": "Snow covered the mountains."
+  },
+  {
+    "kelime": "crazy",
+    "tip": "adj.",
+    "anlam": "çılgın, deli",
+    "ornek_cumle": "That was a crazy idea!"
+  },
+  {
+    "kelime": "creative",
+    "tip": "adj.",
+    "anlam": "yaratıcı",
+    "ornek_cumle": "She works in a creative industry."
+  },
+  {
+    "kelime": "credit",
+    "tip": "n.",
+    "anlam": "kredi, itibar",
+    "ornek_cumle": "I paid with a credit card. Give him credit for his hard work."
+  },
+  {
+    "kelime": "crime",
+    "tip": "n.",
+    "anlam": "suç",
+    "ornek_cumle": "Police are investigating the crime."
+  },
+  {
+    "kelime": "criminal",
+    "tip": "n.",
+    "anlam": "suçlu",
+    "ornek_cumle": "The criminal escaped from prison."
+  },
+  {
+    "kelime": "cross",
+    "tip": "v., n.",
+    "anlam": "karşıdan karşıya geçmek, çarpı işareti",
+    "ornek_cumle": "Be careful when you cross the road."
+  },
+  {
+    "kelime": "crowd",
+    "tip": "n.",
+    "anlam": "kalabalık",
+    "ornek_cumle": "There was a large crowd waiting for the concert."
+  },
+  {
+    "kelime": "crowded",
+    "tip": "adj.",
+    "anlam": "kalabalık",
+    "ornek_cumle": "The bus was very crowded."
+  },
+  {
+    "kelime": "cry",
+    "tip": "v.",
+    "anlam": "ağlamak, bağırmak",
+    "ornek_cumle": "The baby started to cry."
+  },
+  {
+    "kelime": "cupboard",
+    "tip": "n.",
+    "anlam": "dolap",
+    "ornek_cumle": "The glasses are kept in the cupboard."
+  },
+  {
+    "kelime": "curly",
+    "tip": "adj.",
+    "anlam": "kıvırcık",
+    "ornek_cumle": "She has beautiful curly hair."
+  },
+  {
+    "kelime": "cycle",
+    "tip": "n., v.",
+    "anlam": "bisiklet, bisiklet sürmek",
+    "ornek_cumle": "I like to cycle to work."
+  },
+  {
+    "kelime": "daily",
+    "tip": "adj.",
+    "anlam": "günlük",
+    "ornek_cumle": "I read the daily newspaper."
+  },
+  {
+    "kelime": "danger",
+    "tip": "n.",
+    "anlam": "tehlike",
+    "ornek_cumle": "Smoking puts your health in danger."
+  },
+  {
+    "kelime": "dark",
+    "tip": "n.",
+    "anlam": "karanlık (isim)",
+    "ornek_cumle": "I hate walking home alone in the dark."
+  },
+  {
+    "kelime": "data",
+    "tip": "n.",
+    "anlam": "veri",
+    "ornek_cumle": "The company collected a lot of user data."
+  },
+  {
+    "kelime": "dead",
+    "tip": "adj.",
+    "anlam": "ölü",
+    "ornek_cumle": "The tree was dead."
+  },
+  {
+    "kelime": "deal",
+    "tip": "v.",
+    "anlam": "ilgilenmek, dağıtmak (kart)",
+    "ornek_cumle": "I can deal with this problem."
+  },
+  {
+    "kelime": "dear",
+    "tip": "exclam.",
+    "anlam": "canım, Allahım (ünlem)",
+    "ornek_cumle": "Oh dear, I seem to have lost my keys."
+  },
+  {
+    "kelime": "death",
+    "tip": "n.",
+    "anlam": "ölüm",
+    "ornek_cumle": "His death was a shock to everyone."
+  },
+  {
+    "kelime": "decision",
+    "tip": "n.",
+    "anlam": "karar",
+    "ornek_cumle": "Making a decision was very hard."
+  },
+  {
+    "kelime": "deep",
+    "tip": "adj.",
+    "anlam": "derin",
+    "ornek_cumle": "The lake is very deep here."
+  },
+  {
+    "kelime": "definitely",
+    "tip": "adv.",
+    "anlam": "kesinlikle",
+    "ornek_cumle": "I will definitely call you tomorrow."
+  },
+  {
+    "kelime": "degree",
+    "tip": "n.",
+    "anlam": "derece (sıcaklık, eğitim)",
+    "ornek_cumle": "It's 20 degrees Celsius. I have a degree in history."
+  },
+  {
+    "kelime": "dentist",
+    "tip": "n.",
+    "anlam": "diş hekimi",
+    "ornek_cumle": "I have an appointment with the dentist."
+  },
+  {
+    "kelime": "depend",
+    "tip": "v.",
+    "anlam": "bağlı olmak",
+    "ornek_cumle": "It depends on the weather."
+  },
+  {
+    "kelime": "department",
+    "tip": "n.",
+    "anlam": "departman, bölüm",
+    "ornek_cumle": "She works in the sales department."
+  },
+  {
+    "kelime": "desert",
+    "tip": "n.",
+    "anlam": "çöl",
+    "ornek_cumle": "The Sahara is a vast desert."
+  },
+  {
+    "kelime": "designer",
+    "tip": "n.",
+    "anlam": "tasarımcı",
+    "ornek_cumle": "She is a famous fashion designer."
+  },
+  {
+    "kelime": "destroy",
+    "tip": "v.",
+    "anlam": "yok etmek",
+    "ornek_cumle": "The fire destroyed the entire building."
+  },
+  {
+    "kelime": "detective",
+    "tip": "n.",
+    "anlam": "dedektif",
+    "ornek_cumle": "The detective solved the mystery."
+  },
+  {
+    "kelime": "develop",
+    "tip": "v.",
+    "anlam": "geliştirmek, gelişmek",
+    "ornek_cumle": "The company developed a new product."
+  },
+  {
+    "kelime": "device",
+    "tip": "n.",
+    "anlam": "cihaz, alet",
+    "ornek_cumle": "A smartphone is a communication device."
+  },
+  {
+    "kelime": "diary",
+    "tip": "n.",
+    "anlam": "günlük, ajanda",
+    "ornek_cumle": "I write in my diary every night."
+  },
+  {
+    "kelime": "differently",
+    "tip": "adv.",
+    "anlam": "farklı bir şekilde",
+    "ornek_cumle": "She thinks about the problem differently."
+  },
+  {
+    "kelime": "digital",
+    "tip": "adj.",
+    "anlam": "dijital",
+    "ornek_cumle": "We use digital cameras now."
+  },
+  {
+    "kelime": "direct",
+    "tip": "adj.",
+    "anlam": "doğrudan",
+    "ornek_cumle": "Is there a direct train to London?"
+  },
+  {
+    "kelime": "direction",
+    "tip": "n.",
+    "anlam": "yön, talimat",
+    "ornek_cumle": "Which direction should we go? Follow the directions."
+  },
+  {
+    "kelime": "director",
+    "tip": "n.",
+    "anlam": "yönetmen",
+    "ornek_cumle": "The director won an award for the film."
+  },
+  {
+    "kelime": "disagree",
+    "tip": "v.",
+    "anlam": "aynı fikirde olmamak",
+    "ornek_cumle": "I disagree with your opinion."
+  },
+  {
+    "kelime": "disappear",
+    "tip": "v.",
+    "anlam": "gözden kaybolmak",
+    "ornek_cumle": "The magician made the rabbit disappear."
+  },
+  {
+    "kelime": "disaster",
+    "tip": "n.",
+    "anlam": "felaket, afet",
+    "ornek_cumle": "The earthquake was a terrible disaster."
+  },
+  {
+    "kelime": "discover",
+    "tip": "v.",
+    "anlam": "keşfetmek",
+    "ornek_cumle": "He discovered a new type of plant."
+  },
+  {
+    "kelime": "discovery",
+    "tip": "n.",
+    "anlam": "keşif",
+    "ornek_cumle": "The discovery of penicillin was very important."
+  },
+  {
+    "kelime": "discussion",
+    "tip": "n.",
+    "anlam": "tartışma",
+    "ornek_cumle": "We had a long discussion about the future of the company."
+  },
+  {
+    "kelime": "disease",
+    "tip": "n.",
+    "anlam": "hastalık",
+    "ornek_cumle": "The vaccine prevents the disease."
+  },
+  {
+    "kelime": "distance",
+    "tip": "n.",
+    "anlam": "uzaklık, mesafe",
+    "ornek_cumle": "What is the distance between İstanbul and Ankara?"
+  },
+  {
+    "kelime": "divorced",
+    "tip": "adj.",
+    "anlam": "boşanmış",
+    "ornek_cumle": "My parents are divorced."
+  },
+  {
+    "kelime": "document",
+    "tip": "n.",
+    "anlam": "belge, doküman",
+    "ornek_cumle": "I need to sign this document."
+  },
+  {
+    "kelime": "double",
+    "tip": "adj., det., pron., v.",
+    "anlam": "çift, iki katı",
+    "ornek_cumle": "I ordered a double espresso. The price has doubled."
+  },
+  {
+    "kelime": "download",
+    "tip": "v., n.",
+    "anlam": "indirmek, indirme",
+    "ornek_cumle": "I need to download the latest software update."
+  },
+  {
+    "kelime": "downstairs",
+    "tip": "adj.",
+    "anlam": "alt kattaki",
+    "ornek_cumle": "We use the downstairs bathroom."
+  },
+  {
+    "kelime": "drama",
+    "tip": "n.",
+    "anlam": "drama, oyun",
+    "ornek_cumle": "I enjoy watching drama series."
+  },
+  {
+    "kelime": "drawing",
+    "tip": "n.",
+    "anlam": "çizim",
+    "ornek_cumle": "She showed me a drawing of her cat."
+  },
+  {
+    "kelime": "dream",
+    "tip": "n., v.",
+    "anlam": "rüya, hayal etmek",
+    "ornek_cumle": "I had a strange dream last night."
+  },
+  {
+    "kelime": "drive",
+    "tip": "n.",
+    "anlam": "sürüş, yolculuk",
+    "ornek_cumle": "It's a long drive to the beach."
+  },
+  {
+    "kelime": "driving",
+    "tip": "n.",
+    "anlam": "araba sürme (eylemi)",
+    "ornek_cumle": "I hate driving in heavy traffic."
+  },
+  {
+    "kelime": "drop",
+    "tip": "v.",
+    "anlam": "düşürmek, damlatmak",
+    "ornek_cumle": "Be careful not to drop your phone."
+  },
+  {
+    "kelime": "drug",
+    "tip": "n.",
+    "anlam": "ilaç, uyuşturucu",
+    "ornek_cumle": "The doctor prescribed a new drug."
+  },
+  {
+    "kelime": "dry",
+    "tip": "adj., v.",
+    "anlam": "kuru, kurutmak",
+    "ornek_cumle": "The clothes are dry. I need to dry my hair."
+  },
+  {
+    "kelime": "dust",
+    "tip": "n.",
+    "anlam": "toz",
+    "ornek_cumle": "The old house was covered in dust."
+  },
+  {
+    "kelime": "duty",
+    "tip": "n.",
+    "anlam": "görev, sorumluluk",
+    "ornek_cumle": "It is my duty to inform the public."
+  },
+  {
+    "kelime": "DVD",
+    "tip": "n.",
+    "anlam": "DVD",
+    "ornek_cumle": "I found an old DVD in the drawer."
+  },
+  {
+    "kelime": "earn",
+    "tip": "v.",
+    "anlam": "kazanmak (para)",
+    "ornek_cumle": "She earns a high salary."
+  },
+  {
+    "kelime": "earth",
+    "tip": "n.",
+    "anlam": "dünya, toprak",
+    "ornek_cumle": "The Earth orbits the sun."
+  },
+  {
+    "kelime": "easily",
+    "tip": "adv.",
+    "anlam": "kolayca",
+    "ornek_cumle": "He can easily lift that box."
+  },
+  {
+    "kelime": "east",
+    "tip": "n., adj., adv.",
+    "anlam": "doğu",
+    "ornek_cumle": "The sun rises in the east. We drove east."
+  },
+  {
+    "kelime": "education",
+    "tip": "n.",
+    "anlam": "eğitim",
+    "ornek_cumle": "Education is very important for success."
+  },
+  {
+    "kelime": "effect",
+    "tip": "n.",
+    "anlam": "etki",
+    "ornek_cumle": "The medicine had a strange effect on him."
+  },
+  {
+    "kelime": "either",
+    "tip": "det./pron., adv.",
+    "anlam": "ya... ya da, herhangi biri",
+    "ornek_cumle": "You can have either coffee or tea. I don't like it either."
+  },
+  {
+    "kelime": "electric",
+    "tip": "adj.",
+    "anlam": "elektrikli",
+    "ornek_cumle": "I bought a new electric car."
+  },
+  {
+    "kelime": "electrical",
+    "tip": "adj.",
+    "anlam": "elektrikle ilgili",
+    "ornek_cumle": "The storm caused an electrical fault."
+  },
+  {
+    "kelime": "electricity",
+    "tip": "n.",
+    "anlam": "elektrik",
+    "ornek_cumle": "We need electricity to run the computer."
+  },
+  {
+    "kelime": "electronic",
+    "tip": "adj.",
+    "anlam": "elektronik",
+    "ornek_cumle": "I love shopping for electronic devices."
+  },
+  {
+    "kelime": "employ",
+    "tip": "v.",
+    "anlam": "işe almak",
+    "ornek_cumle": "The company employs over 500 people."
+  },
+  {
+    "kelime": "employee",
+    "tip": "n.",
+    "anlam": "çalışan",
+    "ornek_cumle": "The employees went on strike."
+  },
+  {
+    "kelime": "employer",
+    "tip": "n.",
+    "anlam": "işveren",
+    "ornek_cumle": "My employer gave me a bonus."
+  },
+  {
+    "kelime": "empty",
+    "tip": "adj.",
+    "anlam": "boş",
+    "ornek_cumle": "The bottle is empty."
+  },
+  {
+    "kelime": "ending",
+    "tip": "n.",
+    "anlam": "son, bitiş",
+    "ornek_cumle": "I didn't like the ending of the movie."
+  },
+  {
+    "kelime": "energy",
+    "tip": "n.",
+    "anlam": "enerji",
+    "ornek_cumle": "She has a lot of energy in the morning."
+  },
+  {
+    "kelime": "engine",
+    "tip": "n.",
+    "anlam": "motor",
+    "ornek_cumle": "The car's engine is very powerful."
+  },
+  {
+    "kelime": "engineer",
+    "tip": "n.",
+    "anlam": "mühendis",
+    "ornek_cumle": "My father is a software engineer."
+  },
+  {
+    "kelime": "enormous",
+    "tip": "adj.",
+    "anlam": "devasa, çok büyük",
+    "ornek_cumle": "They live in an enormous house."
+  },
+  {
+    "kelime": "enter",
+    "tip": "v.",
+    "anlam": "girmek",
+    "ornek_cumle": "Please enter the room quietly."
+  },
+  {
+    "kelime": "environment",
+    "tip": "n.",
+    "anlam": "çevre",
+    "ornek_cumle": "We must protect the environment."
+  },
+  {
+    "kelime": "equipment",
+    "tip": "n.",
+    "anlam": "ekipman, teçhizat",
+    "ornek_cumle": "You need safety equipment for rock climbing."
+  },
+  {
+    "kelime": "error",
+    "tip": "n.",
+    "anlam": "hata",
+    "ornek_cumle": "There was a serious error in the report."
+  },
+  {
+    "kelime": "especially",
+    "tip": "adv.",
+    "anlam": "özellikle",
+    "ornek_cumle": "I love all sports, especially football."
+  },
+  {
+    "kelime": "essay",
+    "tip": "n.",
+    "anlam": "deneme, makale (kısa)",
+    "ornek_cumle": "I have to write an essay for homework."
+  },
+  {
+    "kelime": "everyday",
+    "tip": "adj.",
+    "anlam": "gündelik",
+    "ornek_cumle": "Brushing teeth is an everyday task."
+  },
+  {
+    "kelime": "everywhere",
+    "tip": "adv.",
+    "anlam": "her yer",
+    "ornek_cumle": "I looked everywhere for my phone."
+  },
+  {
+    "kelime": "evidence",
+    "tip": "n.",
+    "anlam": "kanıt",
+    "ornek_cumle": "There is no evidence that he was there."
+  },
+  {
+    "kelime": "exact",
+    "tip": "adj.",
+    "anlam": "tam, kesin",
+    "ornek_cumle": "What is the exact time?"
+  },
+  {
+    "kelime": "exactly",
+    "tip": "adv.",
+    "anlam": "tam olarak, kesinlikle",
+    "ornek_cumle": "That's exactly what I meant."
+  },
+  {
+    "kelime": "except",
+    "tip": "prep.",
+    "anlam": "hariç, dışında",
+    "ornek_cumle": "Everyone was there except John."
+  },
+  {
+    "kelime": "excellent",
+    "tip": "adj.",
+    "anlam": "mükemmel",
+    "ornek_cumle": "She did an excellent job."
+  },
+  {
+    "kelime": "exist",
+    "tip": "v.",
+    "anlam": "var olmak",
+    "ornek_cumle": "Do aliens exist?"
+  },
+  {
+    "kelime": "expect",
+    "tip": "v.",
+    "anlam": "ummak, beklemek",
+    "ornek_cumle": "I expect you to be on time."
+  },
+  {
+    "kelime": "experience",
+    "tip": "n.",
+    "anlam": "deneyim",
+    "ornek_cumle": "Do you have any experience in marketing?"
+  },
+  {
+    "kelime": "experiment",
+    "tip": "n.",
+    "anlam": "deney",
+    "ornek_cumle": "The scientist conducted a new experiment."
+  },
+  {
+    "kelime": "expert",
+    "tip": "n., adj.",
+    "anlam": "uzman",
+    "ornek_cumle": "He is an expert in computers."
+  },
+  {
+    "kelime": "explanation",
+    "tip": "n.",
+    "anlam": "açıklama",
+    "ornek_cumle": "Can you give me an explanation for this delay?"
+  },
+  {
+    "kelime": "express",
+    "tip": "v.",
+    "anlam": "ifade etmek",
+    "ornek_cumle": "It's difficult to express my feelings."
+  },
+  {
+    "kelime": "expression",
+    "tip": "n.",
+    "anlam": "ifade, deyim",
+    "ornek_cumle": "Her face had an expression of deep sadness."
+  },
+  {
+    "kelime": "extreme",
+    "tip": "adj.",
+    "anlam": "aşırı, uç",
+    "ornek_cumle": "He enjoys extreme sports."
+  },
+  {
+    "kelime": "extremely",
+    "tip": "adv.",
+    "anlam": "aşırı derecede",
+    "ornek_cumle": "It was an extremely cold day."
+  },
+  {
+    "kelime": "factor",
+    "tip": "n.",
+    "anlam": "faktör, etken",
+    "ornek_cumle": "Cost was the main factor in our decision."
+  },
+  {
+    "kelime": "factory",
+    "tip": "n.",
+    "anlam": "fabrika",
+    "ornek_cumle": "The cars are made in a large factory."
+  },
+  {
+    "kelime": "happily",
+    "tip": "adv.",
+    "anlam": "mutlu bir şekilde",
+    "ornek_cumle": "They lived happily ever after."
+  },
+  {
+    "kelime": "have",
+    "tip": "auxiliary v.",
+    "anlam": "sahip olmak (yardımcı fiil)",
+    "ornek_cumle": "I have been waiting for hours."
+  },
+  {
+    "kelime": "headache",
+    "tip": "n.",
+    "anlam": "baş ağrısı",
+    "ornek_cumle": "I have a terrible headache."
+  },
+  {
+    "kelime": "heart",
+    "tip": "n.",
+    "anlam": "kalp",
+    "ornek_cumle": "The heart pumps blood around the body."
+  },
+  {
+    "kelime": "heat",
+    "tip": "n., v.",
+    "anlam": "ısı, ısıtmak",
+    "ornek_cumle": "The heat was intense. Please heat the soup."
+  },
+  {
+    "kelime": "heavy",
+    "tip": "adj.",
+    "anlam": "ağır",
+    "ornek_cumle": "This box is too heavy to lift."
+  },
+  {
+    "kelime": "height",
+    "tip": "n.",
+    "anlam": "yükseklik, boy",
+    "ornek_cumle": "What is the height of that building?"
+  },
+  {
+    "kelime": "helpful",
+    "tip": "adj.",
+    "anlam": "yardımcı",
+    "ornek_cumle": "The staff were very helpful."
+  },
+  {
+    "kelime": "hero",
+    "tip": "n.",
+    "anlam": "kahraman",
+    "ornek_cumle": "He is a war hero."
+  },
+  {
+    "kelime": "hers",
+    "tip": "pron.",
+    "anlam": "onunki (dişil)",
+    "ornek_cumle": "This book is hers."
+  },
+  {
+    "kelime": "herself",
+    "tip": "pron.",
+    "anlam": "kendi, kendisi (dişil)",
+    "ornek_cumle": "She hurt herself while running."
+  },
+  {
+    "kelime": "hide",
+    "tip": "v.",
+    "anlam": "saklamak, gizlemek",
+    "ornek_cumle": "The children hid behind the curtain."
+  },
+  {
+    "kelime": "high",
+    "tip": "adv.",
+    "anlam": "yüksek (zarf)",
+    "ornek_cumle": "The plane flew high in the sky."
+  },
+  {
+    "kelime": "hill",
+    "tip": "n.",
+    "anlam": "tepe",
+    "ornek_cumle": "We climbed a small hill to see the view."
+  },
+  {
+    "kelime": "himself",
+    "tip": "pron.",
+    "anlam": "kendi, kendisi (eril)",
+    "ornek_cumle": "He built the house himself."
+  },
+  {
+    "kelime": "his",
+    "tip": "pron.",
+    "anlam": "onunki (eril)",
+    "ornek_cumle": "That phone is his."
+  },
+  {
+    "kelime": "hit",
+    "tip": "v., n.",
+    "anlam": "vurmak, isabet etmek",
+    "ornek_cumle": "The ball hit the window."
+  },
+  {
+    "kelime": "hockey",
+    "tip": "n.",
+    "anlam": "hokey",
+    "ornek_cumle": "Ice hockey is a very fast sport."
+  },
+  {
+    "kelime": "hold",
+    "tip": "v.",
+    "anlam": "tutmak, elinde tutmak",
+    "ornek_cumle": "Hold my hand, please."
+  },
+  {
+    "kelime": "hole",
+    "tip": "n.",
+    "anlam": "delik, çukur",
+    "ornek_cumle": "There is a large hole in the road."
+  },
+  {
+    "kelime": "home",
+    "tip": "adj.",
+    "anlam": "ev (sıfat)",
+    "ornek_cumle": "We often eat home cooking."
+  },
+  {
+    "kelime": "hope",
+    "tip": "n.",
+    "anlam": "umut",
+    "ornek_cumle": "There is still hope that she will recover."
+  },
+  {
+    "kelime": "huge",
+    "tip": "adj.",
+    "anlam": "muazzam, kocaman",
+    "ornek_cumle": "They bought a huge amount of food."
+  },
+  {
+    "kelime": "human",
+    "tip": "adj., n.",
+    "anlam": "insan, insani",
+    "ornek_cumle": "We are all human beings."
+  },
+  {
+    "kelime": "hurt",
+    "tip": "v., adj.",
+    "anlam": "incitmek, acıtmak, incinmiş",
+    "ornek_cumle": "Did you hurt your arm? My back hurts."
+  },
+  {
+    "kelime": "ice",
+    "tip": "n.",
+    "anlam": "buz",
+    "ornek_cumle": "The road is covered in ice."
+  },
+  {
+    "kelime": "ice cream",
+    "tip": "n.",
+    "anlam": "dondurma",
+    "ornek_cumle": "I bought a chocolate ice cream."
+  },
+  {
+    "kelime": "idea",
+    "tip": "n.",
+    "anlam": "fikir",
+    "ornek_cumle": "I have a brilliant idea!"
+  },
+  {
+    "kelime": "ideal",
+    "tip": "adj.",
+    "anlam": "ideal, mükemmel",
+    "ornek_cumle": "It's the ideal place for a holiday."
+  },
+  {
+    "kelime": "identify",
+    "tip": "v.",
+    "anlam": "tanımlamak, kimliğini belirlemek",
+    "ornek_cumle": "Can you identify the person in this photo?"
+  },
+  {
+    "kelime": "if",
+    "tip": "conj.",
+    "anlam": "eğer",
+    "ornek_cumle": "If it rains, we will stay home."
+  },
+  {
+    "kelime": "ill",
+    "tip": "adj.",
+    "anlam": "hasta",
+    "ornek_cumle": "She was too ill to go to work."
+  },
+  {
+    "kelime": "illness",
+    "tip": "n.",
+    "anlam": "hastalık",
+    "ornek_cumle": "She is recovering from a serious illness."
+  },
+  {
+    "kelime": "image",
+    "tip": "n.",
+    "anlam": "görüntü, imaj",
+    "ornek_cumle": "The image on the screen is very clear."
+  },
+  {
+    "kelime": "imagine",
+    "tip": "v.",
+    "anlam": "hayal etmek",
+    "ornek_cumle": "Can you imagine life without a phone?"
+  },
+  {
+    "kelime": "immediately",
+    "tip": "adv.",
+    "anlam": "hemen, derhal",
+    "ornek_cumle": "Call me immediately if you have any news."
+  },
+  {
+    "kelime": "impossible",
+    "tip": "adj.",
+    "anlam": "imkansız",
+    "ornek_cumle": "It is impossible to finish this in one day."
+  },
+  {
+    "kelime": "important",
+    "tip": "adj.",
+    "anlam": "önemli",
+    "ornek_cumle": "It is important to study for the exam."
+  },
+  {
+    "kelime": "improve",
+    "tip": "v.",
+    "anlam": "geliştirmek, iyileştirmek",
+    "ornek_cumle": "He needs to improve his writing skills."
+  },
+  {
+    "kelime": "in",
+    "tip": "prep., adv.",
+    "anlam": "içinde, içeri",
+    "ornek_cumle": "The keys are in the box."
+  },
+  {
+    "kelime": "include",
+    "tip": "v.",
+    "anlam": "içermek",
+    "ornek_cumle": "The price includes tax."
+  },
+  {
+    "kelime": "included",
+    "tip": "adj.",
+    "anlam": "dahil",
+    "ornek_cumle": "The tip is included in the bill."
+  },
+  {
+    "kelime": "including",
+    "tip": "prep.",
+    "anlam": "dahil olmak üzere",
+    "ornek_cumle": "There were ten people, including me."
+  },
+  {
+    "kelime": "increase",
+    "tip": "v., n.",
+    "anlam": "artırmak, artış",
+    "ornek_cumle": "The company plans to increase production."
+  },
+  {
+    "kelime": "incredible",
+    "tip": "adj.",
+    "anlam": "inanılmaz",
+    "ornek_cumle": "The view from the top was incredible."
+  },
+  {
+    "kelime": "independent",
+    "tip": "adj.",
+    "anlam": "bağımsız",
+    "ornek_cumle": "She is a strong and independent woman."
+  },
+  {
+    "kelime": "individual",
+    "tip": "n., adj.",
+    "anlam": "birey, bireysel",
+    "ornek_cumle": "Every individual has rights. This is an individual choice."
+  },
+  {
+    "kelime": "industry",
+    "tip": "n.",
+    "anlam": "sanayi, sektör",
+    "ornek_cumle": "Tourism is a major industry in the city."
+  },
+  {
+    "kelime": "information",
+    "tip": "n.",
+    "anlam": "bilgi",
+    "ornek_cumle": "I need some information about train times."
+  },
+  {
+    "kelime": "informal",
+    "tip": "adj.",
+    "anlam": "gayri resmi",
+    "ornek_cumle": "It was an informal meeting."
+  },
+  {
+    "kelime": "injury",
+    "tip": "n.",
+    "anlam": "yaralanma",
+    "ornek_cumle": "He had a serious head injury."
+  },
+  {
+    "kelime": "insect",
+    "tip": "n.",
+    "anlam": "böcek",
+    "ornek_cumle": "Ants are small insects."
+  },
+  {
+    "kelime": "inside",
+    "tip": "prep., adv., n., adj.",
+    "anlam": "içinde, içeride",
+    "ornek_cumle": "The keys are inside the house. It's cold inside."
+  },
+  {
+    "kelime": "instead",
+    "tip": "adv.",
+    "anlam": "yerine",
+    "ornek_cumle": "I stayed home instead of going to the party."
+  },
+  {
+    "kelime": "instruction",
+    "tip": "n.",
+    "anlam": "talimat",
+    "ornek_cumle": "Read the instructions carefully."
+  },
+  {
+    "kelime": "instructor",
+    "tip": "n.",
+    "anlam": "eğitmen",
+    "ornek_cumle": "My driving instructor was very patient."
+  },
+  {
+    "kelime": "instrument",
+    "tip": "n.",
+    "anlam": "enstrüman, alet",
+    "ornek_cumle": "She can play three musical instruments."
+  },
+  {
+    "kelime": "intelligent",
+    "tip": "adj.",
+    "anlam": "akıllı, zeki",
+    "ornek_cumle": "She is a highly intelligent person."
+  },
+  {
+    "kelime": "interest",
+    "tip": "n., v.",
+    "anlam": "ilgi, ilgisini çekmek",
+    "ornek_cumle": "He has a strong interest in history."
+  },
+  {
+    "kelime": "interested",
+    "tip": "adj.",
+    "anlam": "ilgili, meraklı",
+    "ornek_cumle": "I am interested in art."
+  },
+  {
+    "kelime": "interesting",
+    "tip": "adj.",
+    "anlam": "ilginç",
+    "ornek_cumle": "That was a very interesting story."
+  },
+  {
+    "kelime": "international",
+    "tip": "adj.",
+    "anlam": "uluslararası",
+    "ornek_cumle": "We sell our products to international customers."
+  },
+  {
+    "kelime": "internet",
+    "tip": "n.",
+    "anlam": "internet",
+    "ornek_cumle": "I spend too much time on the internet."
+  },
+  {
+    "kelime": "interview",
+    "tip": "n., v.",
+    "anlam": "röportaj, mülakat",
+    "ornek_cumle": "She had a job interview yesterday."
+  },
+  {
+    "kelime": "into",
+    "tip": "prep.",
+    "anlam": "içine",
+    "ornek_cumle": "He walked into the room."
+  },
+  {
+    "kelime": "introduce",
+    "tip": "v.",
+    "anlam": "tanıtmak",
+    "ornek_cumle": "Let me introduce you to my wife."
+  },
+  {
+    "kelime": "introduction",
+    "tip": "n.",
+    "anlam": "giriş, tanışma",
+    "ornek_cumle": "The book has a long introduction."
+  },
+  {
+    "kelime": "invent",
+    "tip": "v.",
+    "anlam": "icat etmek",
+    "ornek_cumle": "Who invented the telephone?"
+  },
+  {
+    "kelime": "invention",
+    "tip": "n.",
+    "anlam": "icat",
+    "ornek_cumle": "The light bulb was a great invention."
+  },
+  {
+    "kelime": "involve",
+    "tip": "v.",
+    "anlam": "içermek, dahil etmek",
+    "ornek_cumle": "The job involves a lot of travel."
+  },
+  {
+    "kelime": "island",
+    "tip": "n.",
+    "anlam": "ada",
+    "ornek_cumle": "We spent our holiday on a small island."
+  },
+  {
+    "kelime": "item",
+    "tip": "n.",
+    "anlam": "öğe, madde",
+    "ornek_cumle": "The last item on the list is very important."
+  },
+  {
+    "kelime": "itself",
+    "tip": "pron.",
+    "anlam": "kendi, kendisi (cansız)",
+    "ornek_cumle": "The car stopped by itself."
+  },
+  {
+    "kelime": "jam",
+    "tip": "n.",
+    "anlam": "reçel, sıkışıklık",
+    "ornek_cumle": "I like strawberry jam on my toast. We were stuck in a traffic jam."
+  },
+  {
+    "kelime": "jazz",
+    "tip": "n.",
+    "anlam": "caz (müzik)",
+    "ornek_cumle": "I prefer jazz music to rock."
+  },
+  {
+    "kelime": "jeans",
+    "tip": "n.",
+    "anlam": "kot pantolon",
+    "ornek_cumle": "I need a new pair of jeans."
+  },
+  {
+    "kelime": "jewellery",
+    "tip": "n.",
+    "anlam": "mücevher",
+    "ornek_cumle": "She wore a lot of gold jewellery."
+  },
+  {
+    "kelime": "joke",
+    "tip": "n., v.",
+    "anlam": "şaka, şaka yapmak",
+    "ornek_cumle": "He told a very funny joke."
+  },
+  {
+    "kelime": "journalist",
+    "tip": "n.",
+    "anlam": "gazeteci",
+    "ornek_cumle": "A journalist asked the politician a question."
+  },
+  {
+    "kelime": "jump",
+    "tip": "v., n.",
+    "anlam": "zıplamak, atlamak",
+    "ornek_cumle": "The cat jumped onto the table."
+  },
+  {
+    "kelime": "kid",
+    "tip": "n.",
+    "anlam": "çocuk",
+    "ornek_cumle": "I watched the kids playing in the park."
+  },
+  {
+    "kelime": "kill",
+    "tip": "v.",
+    "anlam": "öldürmek",
+    "ornek_cumle": "The snake was killed by the farmer."
+  },
+  {
+    "kelime": "king",
+    "tip": "n.",
+    "anlam": "kral",
+    "ornek_cumle": "The king ruled the country for fifty years."
+  },
+  {
+    "kelime": "knee",
+    "tip": "n.",
+    "anlam": "diz",
+    "ornek_cumle": "She fell and hurt her knee."
+  },
+  {
+    "kelime": "knife",
+    "tip": "n.",
+    "anlam": "bıçak",
+    "ornek_cumle": "Be careful when using a sharp knife."
+  },
+  {
+    "kelime": "knock",
+    "tip": "v.",
+    "anlam": "kapıyı çalmak",
+    "ornek_cumle": "Someone is knocking at the door."
+  },
+  {
+    "kelime": "knowledge",
+    "tip": "n.",
+    "anlam": "bilgi",
+    "ornek_cumle": "He has a lot of knowledge about history."
+  },
+  {
+    "kelime": "lab",
+    "tip": "n.",
+    "anlam": "laboratuvar (kısa)",
+    "ornek_cumle": "The experiment is conducted in the lab."
+  },
+  {
+    "kelime": "lady",
+    "tip": "n.",
+    "anlam": "bayan, hanımefendi",
+    "ornek_cumle": "A lady in a red dress greeted us."
+  },
+  {
+    "kelime": "lake",
+    "tip": "n.",
+    "anlam": "göl",
+    "ornek_cumle": "We sailed a boat on the lake."
+  },
+  {
+    "kelime": "lamp",
+    "tip": "n.",
+    "anlam": "lamba",
+    "ornek_cumle": "Turn on the lamp, it's dark."
+  },
+  {
+    "kelime": "land",
+    "tip": "v.",
+    "anlam": "inmek (uçak), karaya çıkmak",
+    "ornek_cumle": "The plane landed safely."
+  },
+  {
+    "kelime": "laptop",
+    "tip": "n.",
+    "anlam": "dizüstü bilgisayar",
+    "ornek_cumle": "I usually work on my laptop."
+  },
+  {
+    "kelime": "last¹ (final)",
+    "tip": "adv., n.",
+    "anlam": "son olarak, sonuncusu",
+    "ornek_cumle": "When did you last see him? He was the last to arrive."
+  },
+  {
+    "kelime": "last² (taking time)",
+    "tip": "v.",
+    "anlam": "sürmek, devam etmek",
+    "ornek_cumle": "The meeting lasted for two hours."
+  },
+  {
+    "kelime": "later",
+    "tip": "adj.",
+    "anlam": "daha sonraki",
+    "ornek_cumle": "I'll call you at a later time."
+  },
+  {
+    "kelime": "laughter",
+    "tip": "n.",
+    "anlam": "kahkaha",
+    "ornek_cumle": "We heard the sound of children's laughter."
+  },
+  {
+    "kelime": "law",
+    "tip": "n.",
+    "anlam": "hukuk, yasa",
+    "ornek_cumle": "It's against the law to smoke here."
+  },
+  {
+    "kelime": "lawyer",
+    "tip": "n.",
+    "anlam": "avukat",
+    "ornek_cumle": "My lawyer advised me not to speak."
+  },
+  {
+    "kelime": "lazy",
+    "tip": "adj.",
+    "anlam": "tembel",
+    "ornek_cumle": "He is too lazy to look for a job."
+  },
+  {
+    "kelime": "lead¹",
+    "tip": "v.",
+    "anlam": "yol göstermek, önderlik etmek",
+    "ornek_cumle": "The path leads to the river. He leads a successful team."
+  },
+  {
+    "kelime": "leader",
+    "tip": "n.",
+    "anlam": "lider",
+    "ornek_cumle": "She is the leader of the group."
+  },
+  {
+    "kelime": "learning",
+    "tip": "n.",
+    "anlam": "öğrenme (eylemi)",
+    "ornek_cumle": "Language learning is fun."
+  },
+  {
+    "kelime": "least",
+    "tip": "det./pron., adv.",
+    "anlam": "en az",
+    "ornek_cumle": "It will take at least two hours."
+  },
+  {
+    "kelime": "lecture",
+    "tip": "n., v.",
+    "anlam": "ders, konferans",
+    "ornek_cumle": "The professor gave a lecture on history."
+  },
+  {
+    "kelime": "lemon",
+    "tip": "n.",
+    "anlam": "limon",
+    "ornek_cumle": "I put a slice of lemon in my water."
+  },
+  {
+    "kelime": "lend",
+    "tip": "v.",
+    "anlam": "ödünç vermek",
+    "ornek_cumle": "Can you lend me some money?"
+  },
+  {
+    "kelime": "less",
+    "tip": "det./pron., adv.",
+    "anlam": "daha az",
+    "ornek_cumle": "I need less sugar in my tea."
+  },
+  {
+    "kelime": "level",
+    "tip": "n.",
+    "anlam": "seviye, düzey",
+    "ornek_cumle": "He plays at a professional level."
+  },
+  {
+    "kelime": "lifestyle",
+    "tip": "n.",
+    "anlam": "yaşam tarzı",
+    "ornek_cumle": "She leads a healthy lifestyle."
+  },
+  {
+    "kelime": "lift",
+    "tip": "v., n.",
+    "anlam": "kaldırmak, asansör",
+    "ornek_cumle": "Can you help me lift this table? Let's take the lift."
+  },
+  {
+    "kelime": "light (from the sun/a lamp)",
+    "tip": "v.",
+    "anlam": "yakmak, aydınlatmak",
+    "ornek_cumle": "Can you light the candles?"
+  },
+  {
+    "kelime": "light (not heavy)",
+    "tip": "adj.",
+    "anlam": "hafif",
+    "ornek_cumle": "The box is surprisingly light."
+  },
+  {
+    "kelime": "likely",
+    "tip": "adj.",
+    "anlam": "muhtemel",
+    "ornek_cumle": "It is likely to snow tomorrow."
+  },
+  {
+    "kelime": "link",
+    "tip": "n., v.",
+    "anlam": "bağlantı, bağlamak",
+    "ornek_cumle": "Click on the link to open the page. The two cities are linked by a new road."
+  },
+  {
+    "kelime": "listener",
+    "tip": "n.",
+    "anlam": "dinleyici",
+    "ornek_cumle": "He is a good listener."
+  },
+  {
+    "kelime": "little",
+    "tip": "adv.",
+    "anlam": "biraz (zarf)",
+    "ornek_cumle": "I slept a little last night."
+  },
+  {
+    "kelime": "lock",
+    "tip": "v., n.",
+    "anlam": "kilitlemek, kilit",
+    "ornek_cumle": "Did you lock the door?"
+  },
+  {
+    "kelime": "look",
+    "tip": "n.",
+    "anlam": "bakış, görünüş",
+    "ornek_cumle": "She gave me a worried look."
+  },
+  {
+    "kelime": "lorry",
+    "tip": "n.",
+    "anlam": "kamyon (İngiliz İngilizcesi)",
+    "ornek_cumle": "A large lorry blocked the road."
+  },
+  {
+    "kelime": "lost",
+    "tip": "adj.",
+    "anlam": "kayıp, kaybolmuş",
+    "ornek_cumle": "I feel completely lost in this city."
+  },
+  {
+    "kelime": "loud",
+    "tip": "adj., adv.",
+    "anlam": "yüksek sesli",
+    "ornek_cumle": "The music was too loud."
+  },
+  {
+    "kelime": "loudly",
+    "tip": "adv.",
+    "anlam": "yüksek sesle",
+    "ornek_cumle": "He shouted loudly at the children."
+  },
+  {
+    "kelime": "lovely",
+    "tip": "adj.",
+    "anlam": "güzel, hoş",
+    "ornek_cumle": "We had a lovely time."
+  },
+  {
+    "kelime": "low",
+    "tip": "adj., adv.",
+    "anlam": "alçak, düşük",
+    "ornek_cumle": "The prices are very low."
+  },
+  {
+    "kelime": "luck",
+    "tip": "n.",
+    "anlam": "şans",
+    "ornek_cumle": "Good luck with your exam!"
+  },
+  {
+    "kelime": "lucky",
+    "tip": "adj.",
+    "anlam": "şanslı",
+    "ornek_cumle": "You are lucky to have such good friends."
+  },
+  {
+    "kelime": "machine",
+    "tip": "n.",
+    "anlam": "makine",
+    "ornek_cumle": "The coffee machine is broken."
+  }
+]

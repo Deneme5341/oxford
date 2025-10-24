@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford 3000 Kelime Ezber Aracı</title>
+    <style>
+        /* GENEL STİLLER */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        
+        /* MODÜL STİLLERİ */
+        .menu, .card, .test-results {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        /* BUTON VE SEÇİM STİLLERİ */
+        button, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button.start-test { background-color: #28a745; }
+        button.start-test:hover { background-color: #218838; }
+        .menu button:last-child { background-color: #007bff; }
+        .menu button:last-child:hover { background-color: #0056b3; }
+        .test-controls button:nth-child(2) { background-color: #28a745; } /* Biliyorum */
+        .test-controls button:nth-child(3) { background-color: #dc3545; } /* Bilmiyorum */
+        .test-controls button:nth-child(1) { background-color: #ffc107; color: #333; } /* Anlamı Gör */
+        select {
+            background-color: #e9ecef;
+            color: #333;
+            -webkit-appearance: none; 
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        /* KART STİLLERİ */
+        .card {
+            border-left: 5px solid #007bff;
+            display: none;
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #007bff;
+            font-size: 1.4em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .card p {
+            font-size: 1em;
+            margin: 8px 0;
+        }
+        .card .meaning, .card .example {
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+        .card.active {
+            display: block;
+        }
+        .card .meaning p, .card .example p {
+            font-size: 0.9em;
+            color: #555;
+            padding-left: 10px;
+        }
+        .card .meaning strong, .card .example strong {
+            color: #333;
+            display: block;
+            margin-top: 5px;
+        }
+        .card .example em {
+            font-style: italic;
+        }
+
+        /* SONUÇ STİLLERİ */
+        .test-results h2 { color: #28a745; }
+        .test-results h3 { color: #dc3545; }
+        .result-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95em;
+        }
+        .result-item:last-child { border-bottom: none; }
+        .result-item strong { color: #dc3545; }
+
+        /* GİZLE/GÖSTER DURUMLARI */
+        #test-container, #test-results-container, #word-cards-container p:empty { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Oxford 3000 Kelime Ezber Aracı</h1>
+
+    <div class="menu">
+        <label for="seviye-filtre" style="display: block; margin-bottom: 5px; font-weight: bold;">Çalışma Seviyesini Seçin:</label>
+        <select id="seviye-filtre">
+            <option value="A1">A1 (Temel)</option>
+            <option value="A2">A2 (Orta)</option>
+            <option value="B1">B1 (Orta-İleri)</option>
+            <option value="B2" selected>B2 (İleri)</option>
+            <option value="all">Tüm Kelimeler</option>
+        </select>
+        
+        <button class="start-test" onclick="startTest()">Rastgele 50 Kelimelik Test Başlat</button>
+        <button onclick="loadWords(document.getElementById('seviye-filtre').value)">Kelime Listesini Göster</button>
+    </div>
+
+    <div id="word-cards-container">
+        </div>
+
+    <div id="test-container">
+        <div id="current-test-card" class="card active">
+            </div>
+        <div id="test-controls" class="test-controls">
+            <button onclick="toggleMeaning()">Anlamı/Örneği Gör</button>
+            <button onclick="nextTestWord(true)">Biliyorum (✅)</button>
+            <button onclick="nextTestWord(false)">Bilmiyorum (❌)</button>
+        </div>
+    </div>
+
+    <div id="test-results-container" class="test-results">
+        <h2>Test Sonuçları</h2>
+        <p id="score-summary" style="font-size: 1.1em; font-weight: bold;"></p>
+        <h3>Öğrenilmesi Gerekenler:</h3>
+        <ul id="failed-words-list" style="list-style-type: none; padding: 0;"></ul>
+        <button onclick="window.location.reload();" style="background-color: #007bff; margin-top: 15px;">Yeni Test Başlat/Ana Sayfaya Dön</button>
+    </div>
+
+</div>
+
+<script>
+    let currentWords = [];
+    let testWords = [];
+    let currentTestIndex = 0;
+    const TEST_SIZE = 50;
+
+    // JSON dosya isimleri ve seviye eşleştirmesi (B1 ve B2 artık ayrı)
+    const fileMap = {
+        'A1': { file: 'a1_kelimeler.json', seviye: 'A1' },
+        'A2': { file: 'a2_kelimeler.json', seviye: 'A2' },
+        'B1': { file: 'b1_kelimeler.json', seviye: 'B1' }, 
+        'B2': { file: 'b2_kelimeler.json', seviye: 'B2' }
+    };
+
+    /**
+     * JSON dosyalarından kelimeleri asenkron olarak yükler.
+     * @param {string} seviye - 'A1', 'A2', 'B1', 'B2' veya 'all'
+     */
+    async function fetchWords(seviye) {
+        if (seviye === 'all') {
+            const allPromises = Object.values(fileMap).map(map => 
+                fetch(map.file)
+                    .then(res => res.json())
+                    .then(words => words.map(w => ({...w, seviye: map.seviye}))) 
+                    .catch(e => { console.error(`Dosya yüklenemedi: ${map.file}`, e); return []; })
+            );
+            const results = await Promise.all(allPromises);
+            return results.flat();
+        } else if (fileMap[seviye]) {
+            try {
+                const map = fileMap[seviye];
+                const response = await fetch(map.file);
+                const words = await response.json();
+                return words.map(w => ({...w, seviye: map.seviye}));
+            } catch (error) {
+                console.error(`Dosya yüklenemedi: ${fileMap[seviye].file}`, error);
+                return [];
+            }
+        }
+        return [];
+    }
+
+    // Kelime listesi görünümünü yükle
+    async function loadWords(seviye) {
+        // Arayüzü ayarla
+        document.getElementById('test-container').style.display = 'none';
+        document.getElementById('test-results-container').style.display = 'none';
+        const container = document.getElementById('word-cards-container');
+        container.style.display = 'block';
+        container.innerHTML = '<p style="text-align:center;">Kelime listesi yükleniyor...</p>';
+
+        currentWords = await fetchWords(seviye);
+        renderWordCards(currentWords, seviye);
+    }
+
+    // Kelime kartlarını HTML'e basma (Liste görünümü)
+    function renderWordCards(words, seviye) {
+        const container = document.getElementById('word-cards-container');
+        container.innerHTML = `<p style="text-align:center; font-weight:bold; color: #5cb85c;">${seviye === 'all' ? 'Tüm Seviyelerde' : seviye + ' Seviyesinde'} Toplam ${words.length} Kelime</p>`;
+        
+        if (words.length === 0) {
+            container.innerHTML += `<p style="text-align:center; color:red;">Bu seviyede kelime bulunamadı veya JSON dosyası eksik/hatalı.</p>`;
+            return;
+        }
+
+        words.forEach((word, index) => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.style.display = 'block';
+            card.innerHTML = `
+                <h2>${word.kelime} <span style="font-size:0.6em; color:#6c757d;">(${word.seviye || seviye})</span></h2>
+                <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
+                <button data-index="${index}" onclick="toggleCardDetails(this)">Anlamı ve Örneği Göster</button>
+                <div id="meaning-${index}" class="meaning" style="display:none;">
+                    <strong>Türkçe Anlam:</strong> <p>${word.anlam}</p>
+                </div>
+                <div id="example-${index}" class="example" style="display:none;">
+                    <strong>Örnek Cümle:</strong> <p><em>${word.ornek_cumle}</em></p>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+    
+    // Kelime kartı detaylarını göster/gizle (Liste görünümü için)
+    function toggleCardDetails(button) {
+        const index = button.getAttribute('data-index');
+        const parentCard = button.closest('.card');
+        const meaningDiv = parentCard.querySelector('.meaning');
+        const exampleDiv = parentCard.querySelector('.example');
+        
+        if (meaningDiv.style.display === 'none') {
+            meaningDiv.style.display = 'block';
+            exampleDiv.style.display = 'block';
+            button.textContent = 'Anlamı ve Örneği Gizle';
+            button.style.backgroundColor = '#f0ad4e';
+        } else {
+            meaningDiv.style.display = 'none';
+            exampleDiv.style.display = 'none';
+            button.textContent = 'Anlamı ve Örneği Göster';
+            button.style.backgroundColor = '#ffc107';
+        }
+    }
+
+    // Rastgele kelime seçme (Test için)
+    function selectRandomWords(words, count) {
+        if (words.length === 0) return [];
+        if (words.length <= count) {
+            return words.map(word => ({ ...word, correct: false }));
+        }
+
+        const shuffled = words.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count).map(word => ({ ...word, correct: false }));
+    }
+
+    // Testi Başlat
+    async function startTest() {
+        const selectedLevel = document.getElementById('seviye-filtre').value;
+        
+        // Test için kelimeleri yükle
+        const wordsForTest = await fetchWords(selectedLevel);
+        
+        if (wordsForTest.length === 0) {
+            alert("Kelime listesi boş. Lütfen JSON dosyalarının doğru olduğundan emin olun.");
+            return;
+        }
+        
+        testWords = selectRandomWords(wordsForTest, TEST_SIZE);
+        currentTestIndex = 0;
+        
+        // Arayüzü test moduna ayarla
+        document.getElementById('word-cards-container').style.display = 'none';
+        document.getElementById('test-results-container').style.display = 'none';
+        document.getElementById('test-container').style.display = 'block';
+
+        renderTestCard();
+    }
+
+    // Test kartını render et
+    function renderTestCard() {
+        if (currentTestIndex >= testWords.length) {
+            showTestResults();
+            return;
+        }
+
+        const word = testWords[currentTestIndex];
+        const card = document.getElementById('current-test-card');
+        card.innerHTML = `
+            <h2>${word.kelime} <span style="font-size:0.6em; color:#6c757d;">(${currentTestIndex + 1}/${testWords.length} - ${word.seviye})</span></h2>
+            <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
+            <div id="test-meaning" class="meaning">
+                <strong>Türkçe Anlam:</strong> <p>${word.anlam}</p>
+            </div>
+            <div id="test-example" class="example">
+                <strong>Örnek Cümle:</strong> <p><em>${word.ornek_cumle}</em></p>
+            </div>
+        `;
+        // Her yeni kelimede anlamı gizle ve butonları sıfırla
+        document.getElementById('test-meaning').style.display = 'none';
+        document.getElementById('test-example').style.display = 'none';
+        document.querySelector('#test-controls button:first-child').textContent = 'Anlamı/Örneği Gör';
+        document.querySelector('#test-controls button:first-child').style.backgroundColor = '#ffc107';
+    }
+
+    // Anlamı ve örneği göster/gizle (Test modu için)
+    function toggleMeaning() {
+        const meaning = document.getElementById('test-meaning');
+        const example = document.getElementById('test-example');
+        
+        if (meaning.style.display === 'none') {
+            meaning.style.display = 'block';
+            example.style.display = 'block';
+            document.querySelector('#test-controls button:first-child').textContent = 'Anlamı/Örneği Gizle';
+            document.querySelector('#test-controls button:first-child').style.backgroundColor = '#f0ad4e';
+        } else {
+            meaning.style.display = 'none';
+            example.style.display = 'none';
+            document.querySelector('#test-controls button:first-child').textContent = 'Anlamı/Örneği Gör';
+            document.querySelector('#test-controls button:first-child').style.backgroundColor = '#ffc107';
+        }
+    }
+
+    // Sonraki test kelimesine geç
+    function nextTestWord(isCorrect) {
+        if (currentTestIndex < testWords.length) {
+            testWords[currentTestIndex].correct = isCorrect;
+            currentTestIndex++;
+            renderTestCard();
+        }
+    }
+
+    // Test sonuçlarını göster
+    function showTestResults() {
+        document.getElementById('test-container').style.display = 'none';
+        const resultsContainer = document.getElementById('test-results-container');
+        resultsContainer.style.display = 'block';
+
+        const correctCount = testWords.filter(w => w.correct).length;
+        const failedWords = testWords.filter(w => !w.correct);
+
+        document.getElementById('score-summary').innerHTML = `Sonuç: ${correctCount} / ${testWords.length} (${Math.round((correctCount / testWords.length) * 100)}%) başarılı.`;
+
+        const failedList = document.getElementById('failed-words-list');
+        failedList.innerHTML = '';
+        failedWords.forEach(word => {
+            const li = document.createElement('li');
+            li.className = 'result-item';
+            li.innerHTML = `<strong>${word.kelime} (${word.seviye})</strong>: ${word.anlam} <br> Örnek: <em>${word.ornek_cumle}</em>`;
+            failedList.appendChild(li);
+        });
+        
+        if (failedWords.length === 0) {
+            failedList.innerHTML = '<li style="color:#28a745; font-weight: bold;">Tebrikler! Tüm kelimeleri doğru bildiniz. Mükemmel bir çalışma!</li>';
+        }
+    }
+
+    // Sayfa yüklendiğinde varsayılan seviyeyi (B2) yükle
+    document.addEventListener('DOMContentLoaded', () => {
+        loadWords('B2');
+    });
+
+</script>
+
+</body>
+</html>
