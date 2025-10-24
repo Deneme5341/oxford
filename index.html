@@ -79,44 +79,6 @@
             display: block;
         }
         
-        /* FLASHCARD ÖZEL STİLİ */
-        .flashcard-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 300px;
-            margin-bottom: 20px;
-        }
-        .flashcard-wrapper .card {
-            width: 90%;
-            min-height: 250px;
-            display: block !important; 
-            border: 1px solid #ddd;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-        .flashcard-wrapper .card h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            border-bottom: none;
-        }
-        .flashcard-wrapper .card .details {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px dashed #ccc;
-        }
-        .flashcard-controls {
-            display: flex;
-            justify-content: space-between;
-        }
-        .flashcard-controls button {
-            width: 48%;
-            padding: 10px;
-        }
-        .flashcard-controls button.next-card { background-color: #007bff; }
-
-
         /* EŞLEŞTİRME OYUNU STİLLERİ */
         #matching-game-container {
             display: none;
@@ -223,7 +185,7 @@
         .result-item strong { color: #dc3545; }
 
         /* GİZLE/GÖSTER DURUMLARI */
-        #test-container, #flashcard-container, #word-cards-container p:empty { display: none; }
+        #test-container, #word-cards-container p:empty { display: none; }
     </style>
 </head>
 <body>
@@ -247,7 +209,6 @@
             <label for="görünüm-modu">Çalışma Modu:</label>
             <select id="görünüm-modu">
                 <option value="liste">Liste Görünümü (Tümü)</option>
-                <option value="flashcard">Flaş Kart Görünümü (Tek Odak)</option>
                 <option value="matching">Eşleştirme Oyunu (Eğlenceli)</option>
             </select>
         </div>
@@ -261,17 +222,6 @@
         <div id="match-grid">
             </div>
         <div id="match-message" style="color: #28a745;">Oyuna başlamak için yukarıdan seviye seçip 'Başlat'a tıklayın.</div>
-    </div>
-
-    <div id="flashcard-container" style="display:none;">
-        <div class="flashcard-wrapper">
-            <div id="current-flashcard" class="card" onclick="toggleFlashcardDetails(this)">
-                </div>
-        </div>
-        <div class="flashcard-controls">
-            <button onclick="prevFlashcard()" style="background-color: #6c757d;">&larr; Önceki Kelime</button>
-            <button class="next-card" onclick="nextFlashcard()">Sonraki Kelime &rarr;</button>
-        </div>
     </div>
 
     <div id="word-cards-container" style="display:none;">
@@ -300,7 +250,6 @@
     let currentWords = [];
     let testWords = [];
     let currentTestIndex = 0;
-    let currentFlashcardIndex = 0;
     const TEST_SIZE = 50;
     const MATCH_PAIR_COUNT = 6; 
     let score = 0;
@@ -350,7 +299,6 @@
         // Tüm görünüm alanlarını gizle
         document.getElementById('test-container').style.display = 'none';
         document.getElementById('test-results-container').style.display = 'none';
-        document.getElementById('flashcard-container').style.display = 'none';
         document.getElementById('word-cards-container').style.display = 'none';
         document.getElementById('matching-game-container').style.display = 'none';
         
@@ -359,8 +307,6 @@
 
         if (mod === 'liste') {
             renderWordList(currentWords, seviye);
-        } else if (mod === 'flashcard') {
-            renderFlashcards(currentWords, seviye);
         } else if (mod === 'matching') {
             startMatchingGame(currentWords, seviye);
         }
@@ -433,82 +379,8 @@
             button.style.backgroundColor = '#ffc107';
         }
     }
-
-    // --- MOD 2: FLASHCARD GÖRÜNÜMÜ (Düzeltildi) ---
-
-    function renderFlashcards(words, seviye) {
-        const container = document.getElementById('flashcard-container');
-        container.style.display = 'block';
-
-        if (words.length === 0) {
-            document.getElementById('current-flashcard').innerHTML = `<p style="color:red;">Kelime bulunamadı.</p>`;
-            return;
-        }
-
-        currentFlashcardIndex = 0;
-        // Kartları karıştır
-        currentWords = [...words].sort(() => 0.5 - Math.random());
-        displayCurrentFlashcard(currentWords, seviye);
-    }
-
-    function displayCurrentFlashcard(words, seviye) {
-        const word = words[currentFlashcardIndex];
-        const cardElement = document.getElementById('current-flashcard');
-        
-        cardElement.style.borderLeftColor = '#dc3545';
-        cardElement.setAttribute('data-flipped', 'false');
-
-        // Kartın ön yüzü (İngilizce Kelime)
-        cardElement.innerHTML = `
-            <h2>${word.kelime}</h2>
-            <p style="color: #6c757d;">(${word.seviye || seviye})</p>
-            <div class="details" style="display: none;">
-                <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
-                <p><strong>Türkçe Anlam:</strong> ${word.anlam}</p>
-                <p><strong>Örnek Cümle:</strong> <em>${word.ornek_cumle}</em></p>
-            </div>
-            <p style="margin-top: 25px; color: #007bff;">(Detayları görmek için tıklayın)</p>
-        `;
-        
-        const total = currentWords.length;
-        const current = currentFlashcardIndex + 1;
-        
-        let counter = document.getElementById('flashcard-counter');
-        if (!counter) {
-             counter = document.createElement('p');
-             counter.id = 'flashcard-counter';
-             counter.style.textAlign = 'center';
-             document.querySelector('.flashcard-wrapper').insertAdjacentElement('beforebegin', counter);
-        }
-        counter.textContent = `${current} / ${total} Kelime`;
-    }
-
-    function toggleFlashcardDetails(card) {
-        const details = card.querySelector('.details');
-        const isFlipped = card.getAttribute('data-flipped') === 'true';
-
-        if (!isFlipped) {
-            details.style.display = 'block';
-            card.style.borderLeftColor = '#28a745';
-            card.setAttribute('data-flipped', 'true');
-        } else {
-            details.style.display = 'none';
-            card.style.borderLeftColor = '#dc3545';
-            card.setAttribute('data-flipped', 'false');
-        }
-    }
-
-    function nextFlashcard() {
-        currentFlashcardIndex = (currentFlashcardIndex + 1) % currentWords.length;
-        displayCurrentFlashcard(currentWords, document.getElementById('seviye-filtre').value);
-    }
-
-    function prevFlashcard() {
-        currentFlashcardIndex = (currentFlashcardIndex - 1 + currentWords.length) % currentWords.length;
-        displayCurrentFlashcard(currentWords, document.getElementById('seviye-filtre').value);
-    }
     
-    // --- MOD 3: EŞLEŞTİRME OYUNU ---
+    // --- MOD 2: EŞLEŞTİRME OYUNU ---
 
     function startMatchingGame(words, seviye) {
         document.getElementById('matching-game-container').style.display = 'block';
@@ -516,7 +388,7 @@
         
         const selectedPairs = selectRandomWords(words, MATCH_PAIR_COUNT);
         if (selectedPairs.length < MATCH_PAIR_COUNT) {
-            document.getElementById('match-message').textContent = `Hata: ${seviye} seviyesinde ${MATCH_PAIR_COUNT} çift oluşturacak kadar kelime yok. Lütfen başka bir seviye seçin.`;
+            document.getElementById('match-message').textContent = `Hata: ${seviye} seviyesinde ${MATCH_PAIR_COUNT} çift oluşturacak kadar kelime yok. Lütfen ${seviye === 'all' ? 'başka bir seviye' : 'Tüm Kelimeler modunu'} seçin.`;
             document.getElementById('match-grid').innerHTML = '';
             return;
         }
@@ -601,28 +473,28 @@
         }
     }
 
-    // --- MOD 4: ÇOKTAN SEÇMELİ TEST (YENİ) ---
+    // --- MOD 3: ÇOKTAN SEÇMELİ TEST ---
 
     async function startTest() {
         const selectedLevel = document.getElementById('seviye-filtre').value;
         
         // Tüm görünüm alanlarını gizle
         document.getElementById('word-cards-container').style.display = 'none';
-        document.getElementById('flashcard-container').style.display = 'none';
         document.getElementById('matching-game-container').style.display = 'none';
         document.getElementById('test-results-container').style.display = 'none';
 
-        const allWords = await fetchWords('all'); // Tüm kelimeleri al (yanlış şıklar için)
-        const wordsForTest = selectRandomWords(allWords, TEST_SIZE); // Test kelimelerini al
+        // Yanlış şıklar için tüm kelimeleri al
+        const allWords = await fetchWords('all');
+        const wordsForTest = selectRandomWords(allWords, TEST_SIZE);
         
         if (wordsForTest.length < TEST_SIZE) {
-            alert(`Test için yeterli kelime (${TEST_SIZE}) bulunamadı. Toplam kelime: ${wordsForTest.length}`);
+            alert(`Test için yeterli kelime (${TEST_SIZE}) bulunamadı. Lütfen JSON dosyalarınızı kontrol edin.`);
             return;
         }
         
         testWords = wordsForTest;
         currentTestIndex = 0;
-        score = 0; // Skoru sıfırla
+        score = 0;
         
         document.getElementById('test-container').style.display = 'block';
         renderTestCard();
@@ -636,7 +508,8 @@
         }
 
         const currentWord = testWords[currentTestIndex];
-        const allWordsFlat = currentWords.length > 0 ? currentWords : testWords; // Yedek tüm kelimeler
+        // Test için her zaman tüm kelimelerin listesini al (yanlış şıklar için)
+        const allWordsFlat = currentWords.length > 0 ? currentWords : testWords; 
 
         // Doğru şıkkı hariç tutarak 3 rastgele yanlış şık seç
         const incorrectOptions = allWordsFlat
@@ -680,7 +553,7 @@
 
         if (isCorrect) {
             selectedButton.classList.add('correct');
-            score++; // Skoru artır
+            score++;
             testWords[currentTestIndex].correct = true;
         } else {
             selectedButton.classList.add('incorrect');
