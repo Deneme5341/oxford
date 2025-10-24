@@ -48,11 +48,13 @@
         }
         button.start-test { background-color: #28a745; }
         button.start-test:hover { background-color: #218838; }
-        .menu button:last-child { background-color: #007bff; }
-        .menu button:last-child:hover { background-color: #0056b3; }
+        .menu button { background-color: #007bff; }
+        .menu button:hover { background-color: #0056b3; }
+        
+        .test-controls button:nth-child(1) { background-color: #ffc107; color: #333; } /* Cevabı Gör */
         .test-controls button:nth-child(2) { background-color: #28a745; } /* Biliyorum */
         .test-controls button:nth-child(3) { background-color: #dc3545; } /* Bilmiyorum */
-        .test-controls button:nth-child(1) { background-color: #ffc107; color: #333; } /* Cevabı Gör */
+        
         select {
             background-color: #e9ecef;
             color: #333;
@@ -60,56 +62,90 @@
             -moz-appearance: none;
             appearance: none;
             cursor: pointer;
+            margin-bottom: 5px;
+        }
+        .select-group {
+            margin-bottom: 15px;
+        }
+        .select-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
         }
 
         /* KART STİLLERİ */
         .card {
-            border-left: 5px solid #dc3545; /* Varsayılan: Türkçe-İngilizce çeviri */
+            border-left: 5px solid #007bff;
             display: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            padding: 15px;
         }
         .card.active {
             display: block;
         }
-        .card:hover {
-            background-color: #f8f9fa;
+        
+        /* FLASHCARD ÖZEL STİLİ */
+        .flashcard-wrapper {
+            /* Sadece bir kartı göster */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            margin-bottom: 20px;
         }
+        .flashcard-wrapper .card {
+            width: 90%;
+            min-height: 250px;
+            display: block !important; /* Flashcard modunda daima görünür */
+            border: 1px solid #ddd;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .flashcard-wrapper .card h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            border-bottom: none;
+        }
+        .flashcard-wrapper .card .details {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+        }
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+        }
+        .flashcard-controls button {
+            width: 48%;
+            padding: 10px;
+        }
+        .flashcard-controls button.next-card { background-color: #007bff; }
+
+        /* KART İÇİ STİLLER */
         .card h2 {
             margin-top: 0;
-            color: #dc3545;
+            color: #007bff;
             font-size: 1.4em;
             border-bottom: 1px solid #eee;
             padding-bottom: 5px;
         }
-        .card h2.english-word {
-            color: #007bff;
-        }
-
-        /* YENİ FLIP MODU İÇİN KART YAPISI */
-        .front-content {
-            /* Başlangıçta gösterilen (Türkçe) */
-            display: block;
-            min-height: 50px;
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #333;
-        }
-        .back-content {
-            /* Başlangıçta gizlenen (İngilizce ve Detaylar) */
-            display: none;
-            border-top: 1px dashed #ccc;
-            padding-top: 10px;
-            margin-top: 10px;
-        }
-        .back-content p {
+        .card p {
             font-size: 1em;
-            margin: 5px 0;
+            margin: 8px 0;
         }
-        .back-content em {
+        .card .details {
+            display: none;
+        }
+        .card .details strong {
+            color: #333;
+            display: block;
+            margin-top: 5px;
+        }
+        .card .details em {
             font-style: italic;
             color: #6c757d;
         }
+
 
         /* SONUÇ STİLLERİ */
         .test-results h2 { color: #28a745; }
@@ -123,7 +159,7 @@
         .result-item strong { color: #dc3545; }
 
         /* GİZLE/GÖSTER DURUMLARI */
-        #test-container, #test-results-container, #word-cards-container p:empty { display: none; }
+        #test-container, #flashcard-container, #word-cards-container p:empty { display: none; }
     </style>
 </head>
 <body>
@@ -132,26 +168,48 @@
     <h1>Oxford 3000 Kelime Ezber Aracı</h1>
 
     <div class="menu">
-        <label for="seviye-filtre" style="display: block; margin-bottom: 5px; font-weight: bold;">Çalışma Seviyesini Seçin:</label>
-        <select id="seviye-filtre">
-            <option value="A1">A1 (Temel)</option>
-            <option value="A2">A2 (Orta)</option>
-            <option value="B1">B1 (Orta-İleri)</option>
-            <option value="B2" selected>B2 (İleri)</option>
-            <option value="all">Tüm Kelimeler</option>
-        </select>
+        <div class="select-group">
+            <label for="seviye-filtre">Çalışma Seviyesini Seçin:</label>
+            <select id="seviye-filtre">
+                <option value="A1">A1 (Temel)</option>
+                <option value="A2">A2 (Orta)</option>
+                <option value="B1">B1 (Orta-İleri)</option>
+                <option value="B2" selected>B2 (İleri)</option>
+                <option value="all">Tüm Kelimeler</option>
+            </select>
+        </div>
+
+        <div class="select-group">
+            <label for="görünüm-modu">Görünüm Modu:</label>
+            <select id="görünüm-modu">
+                <option value="liste">Liste Görünümü (Tümü)</option>
+                <option value="flashcard">Flaş Kart Görünümü (Tek Odak)</option>
+            </select>
+        </div>
         
         <button class="start-test" onclick="startTest()">Rastgele 50 Kelimelik Test Başlat</button>
-        <button onclick="loadWords(document.getElementById('seviye-filtre').value)">Kelime Listesini Göster</button>
+        <button onclick="displayWords()">Seçili Kelimeleri Göster</button>
+    </div>
+
+    <div id="flashcard-container" style="display:none;">
+        <div class="flashcard-wrapper">
+            <div id="current-flashcard" class="card" onclick="toggleFlashcardDetails(this)">
+                </div>
+        </div>
+        <div class="flashcard-controls">
+            <button onclick="prevFlashcard()" style="background-color: #6c757d;">&larr; Önceki Kelime</button>
+            <button class="next-card" onclick="nextFlashcard()">Sonraki Kelime &rarr;</button>
+        </div>
     </div>
 
     <div id="word-cards-container">
         </div>
 
-    <div id="test-container">
-        <div id="current-test-card" class="card active" onclick="toggleTestFlip(this)">
+    <div id="test-container" style="display:none;">
+        <div id="current-test-card" class="card active">
             </div>
         <div id="test-controls" class="test-controls">
+            <button onclick="toggleTestDetails()">Cevabı Gör</button>
             <button onclick="nextTestWord(true)">Biliyorum (✅)</button>
             <button onclick="nextTestWord(false)">Bilmiyorum (❌)</button>
         </div>
@@ -171,6 +229,7 @@
     let currentWords = [];
     let testWords = [];
     let currentTestIndex = 0;
+    let currentFlashcardIndex = 0; // Yeni Flaş Kart indeksi
     const TEST_SIZE = 50;
 
     // JSON dosya isimleri ve seviye eşleştirmesi
@@ -208,21 +267,31 @@
         return [];
     }
 
-    // Kelime listesi görünümünü yükle
-    async function loadWords(seviye) {
+    // Seçili seviyeye göre kelimeleri yükler ve görünüm modunu belirler
+    async function displayWords() {
+        const seviye = document.getElementById('seviye-filtre').value;
+        const mod = document.getElementById('görünüm-modu').value;
+        
+        // Arayüzü sıfırla
         document.getElementById('test-container').style.display = 'none';
         document.getElementById('test-results-container').style.display = 'none';
-        const container = document.getElementById('word-cards-container');
-        container.style.display = 'block';
-        container.innerHTML = '<p style="text-align:center;">Kelime listesi yükleniyor...</p>';
-
+        
+        // Kelimeleri yükle
         currentWords = await fetchWords(seviye);
-        renderWordCards(currentWords, seviye);
+
+        if (mod === 'liste') {
+            document.getElementById('flashcard-container').style.display = 'none';
+            renderWordList(currentWords, seviye);
+        } else if (mod === 'flashcard') {
+            document.getElementById('word-cards-container').style.display = 'none';
+            renderFlashcards(currentWords, seviye);
+        }
     }
 
-    // Kelime kartlarını HTML'e basma (Flip Modu - Türkçe > İngilizce)
-    function renderWordCards(words, seviye) {
+    // Liste Görünümünü Render Etme
+    function renderWordList(words, seviye) {
         const container = document.getElementById('word-cards-container');
+        container.style.display = 'block';
         container.innerHTML = `<p style="text-align:center; font-weight:bold; color: #5cb85c;">${seviye === 'all' ? 'Tüm Seviyelerde' : seviye + ' Seviyesinde'} Toplam ${words.length} Kelime</p>`;
         
         if (words.length === 0) {
@@ -230,75 +299,148 @@
             return;
         }
 
-        words.forEach((word) => {
+        words.forEach((word, index) => {
             const card = document.createElement('div');
             card.className = 'card';
             card.style.display = 'block';
-            
-            // Kart içeriği: Başlangıçta Türkçe gösterilir.
             card.innerHTML = `
-                <div class="front-content">
-                    <p><strong>Türkçe:</strong> ${word.anlam}</p>
-                </div>
-                <div class="back-content">
-                    <h2 class="english-word">${word.kelime} <span style="font-size:0.6em; color:#6c757d;">(${word.seviye || seviye})</span></h2>
+                <h2>${word.kelime} <span style="font-size:0.6em; color:#6c757d;">(${word.seviye || seviye})</span></h2>
+                <div class="details">
                     <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
+                    <p><strong>Türkçe Anlam:</strong> ${word.anlam}</p>
                     <p><strong>Örnek Cümle:</strong> <em>${word.ornek_cumle}</em></p>
                 </div>
+                <button data-index="${index}" onclick="toggleListDetails(this)">Anlamı Göster</button>
             `;
-            
-            // Tıklama olayı ile kartı çevirme (İngilizce içeriği göster)
-            card.onclick = function() {
-                const front = this.querySelector('.front-content');
-                const back = this.querySelector('.back-content');
-                
-                if (front.style.display !== 'none') {
-                    front.style.display = 'none';
-                    back.style.display = 'block';
-                    this.style.borderLeftColor = '#007bff';
-                } else {
-                    front.style.display = 'block';
-                    back.style.display = 'none';
-                    this.style.borderLeftColor = '#dc3545';
-                }
-            };
             container.appendChild(card);
         });
     }
 
-    // Rastgele kelime seçme (Test için)
+    // Liste görünümü için detayları açıp kapama
+    function toggleListDetails(button) {
+        const detailsDiv = button.previousElementSibling;
+        
+        if (detailsDiv.style.display === 'none' || detailsDiv.style.display === '') {
+            detailsDiv.style.display = 'block';
+            button.textContent = 'Anlamı Gizle';
+            button.style.backgroundColor = '#f0ad4e';
+        } else {
+            detailsDiv.style.display = 'none';
+            button.textContent = 'Anlamı Göster';
+            button.style.backgroundColor = '#ffc107';
+        }
+    }
+
+    // Flashcard Görünümünü Render Etme
+    function renderFlashcards(words, seviye) {
+        const container = document.getElementById('flashcard-container');
+        document.getElementById('word-cards-container').style.display = 'none';
+        container.style.display = 'block';
+
+        if (words.length === 0) {
+            document.getElementById('current-flashcard').innerHTML = `<p style="color:red;">Kelime bulunamadı.</p>`;
+            return;
+        }
+
+        currentFlashcardIndex = 0;
+        displayCurrentFlashcard(words, seviye);
+    }
+
+    // Mevcut Flaş Kartı Ekranda Gösterme
+    function displayCurrentFlashcard(words, seviye) {
+        const word = words[currentFlashcardIndex];
+        const cardElement = document.getElementById('current-flashcard');
+        
+        // Kartı sıfırla (Gizli)
+        cardElement.querySelector('.details').style.display = 'none';
+        cardElement.style.borderLeftColor = '#dc3545';
+        cardElement.setAttribute('data-flipped', 'false');
+
+        // Kartın ön yüzü (İngilizce Kelime)
+        cardElement.innerHTML = `
+            <h2>${word.kelime}</h2>
+            <p style="color: #6c757d;">(${word.seviye || seviye})</p>
+            <div class="details">
+                <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
+                <p><strong>Türkçe Anlam:</strong> ${word.anlam}</p>
+                <p><strong>Örnek Cümle:</strong> <em>${word.ornek_cumle}</em></p>
+            </div>
+            <p style="margin-top: 25px; color: #007bff;">(Cevabı görmek için tıklayın)</p>
+        `;
+        
+        // Kontrol metnini güncelle
+        const total = currentWords.length;
+        const current = currentFlashcardIndex + 1;
+        document.querySelector('.flashcard-wrapper').insertAdjacentHTML('afterbegin', `<p id="flashcard-counter" style="text-align: center; font-weight: bold;">${current} / ${total}</p>`);
+        document.getElementById('flashcard-counter').remove(); // Eski sayacı kaldır
+        document.querySelector('.flashcard-wrapper').insertAdjacentHTML('afterbegin', `<p id="flashcard-counter" style="text-align: center; font-weight: bold;">${current} / ${total}</p>`);
+    }
+
+    // Flaş Kartı Çevirme
+    function toggleFlashcardDetails(card) {
+        const details = card.querySelector('.details');
+        const isFlipped = card.getAttribute('data-flipped') === 'true';
+
+        if (!isFlipped) {
+            details.style.display = 'block';
+            card.style.borderLeftColor = '#007bff';
+            card.setAttribute('data-flipped', 'true');
+        } else {
+            // İsteğe bağlı: Geri çevirmeye izin vermeyebiliriz, veya izin veririz.
+            // Şimdilik öğrenme modunda sürekli çevirmeye izin veriyoruz.
+            details.style.display = 'none';
+            card.style.borderLeftColor = '#dc3545';
+            card.setAttribute('data-flipped', 'false');
+        }
+    }
+
+    // Sonraki Flaş Karta Geçme
+    function nextFlashcard() {
+        currentFlashcardIndex = (currentFlashcardIndex + 1) % currentWords.length;
+        displayCurrentFlashcard(currentWords, document.getElementById('seviye-filtre').value);
+    }
+
+    // Önceki Flaş Karta Geçme
+    function prevFlashcard() {
+        currentFlashcardIndex = (currentFlashcardIndex - 1 + currentWords.length) % currentWords.length;
+        displayCurrentFlashcard(currentWords, document.getElementById('seviye-filtre').value);
+    }
+
+
+    // Rastgele kelime seçme (Test için) - (Kodu kısaltmak için aynen bırakıldı)
     function selectRandomWords(words, count) {
         if (words.length === 0) return [];
         if (words.length <= count) {
             return words.map(word => ({ ...word, correct: false }));
         }
-
         const shuffled = words.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, count).map(word => ({ ...word, correct: false }));
     }
 
-    // Testi Başlat
+    // Testi Başlat (Öncekiyle aynı mantık)
     async function startTest() {
         const selectedLevel = document.getElementById('seviye-filtre').value;
+        
+        // Arayüzü ayarla
+        document.getElementById('word-cards-container').style.display = 'none';
+        document.getElementById('flashcard-container').style.display = 'none';
+        document.getElementById('test-results-container').style.display = 'none';
+
         const wordsForTest = await fetchWords(selectedLevel);
         
-        if (wordsForTest.length === 0) {
-            alert("Kelime listesi boş. Lütfen JSON dosyalarının doğru olduğundan emin olun.");
+        if (wordsForTest.length < TEST_SIZE) {
+            alert(`Test için yeterli kelime (${TEST_SIZE}) bulunamadı. Toplam kelime: ${wordsForTest.length}`);
             return;
         }
         
         testWords = selectRandomWords(wordsForTest, TEST_SIZE);
         currentTestIndex = 0;
         
-        // Arayüzü test moduna ayarla
-        document.getElementById('word-cards-container').style.display = 'none';
-        document.getElementById('test-results-container').style.display = 'none';
         document.getElementById('test-container').style.display = 'block';
-
         renderTestCard();
     }
 
-    // Test kartını render et (Flip Modunda)
+    // Test kartını render et (Basit görünüm)
     function renderTestCard() {
         if (currentTestIndex >= testWords.length) {
             showTestResults();
@@ -308,63 +450,45 @@
         const word = testWords[currentTestIndex];
         const card = document.getElementById('current-test-card');
         
-        // Test kartı içeriği: Başlangıçta Türkçe gösterilir.
         card.innerHTML = `
-            <h2 style="color: #007bff;">Kelime Testi <span style="font-size:0.6em; color:#6c757d;">(${currentTestIndex + 1}/${testWords.length} - ${word.seviye})</span></h2>
+            <h2>${word.kelime} <span style="font-size:0.6em; color:#6c757d;">(${currentTestIndex + 1}/${testWords.length} - ${word.seviye})</span></h2>
+            <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
             
-            <div id="test-front" class="front-content" style="display: block;">
-                <p style="font-size: 1.1em;">Türkçe Anlamı Nedir?</p>
-                <p style="color: #dc3545; font-size: 1.5em;"><strong>${word.anlam}</strong></p>
-            </div>
-
-            <div id="test-back" class="back-content" style="display: none;">
-                <h2 class="english-word" style="color: #28a745; border: none;">${word.kelime}</h2>
-                <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
+            <div id="test-details" class="details" style="display: none;">
+                <p><strong>Türkçe Anlam:</strong> ${word.anlam}</p>
                 <p><strong>Örnek Cümle:</strong> <em>${word.ornek_cumle}</em></p>
             </div>
         `;
-        // Kartı ilk başta "Türkçe görünümünde" ayarla
-        card.setAttribute('data-flipped', 'false');
-        card.style.borderLeftColor = '#dc3545'; 
+        // Kartı başlangıçta "kapalı" (cevap gizli) durumda ayarla
+        card.setAttribute('data-details-shown', 'false');
     }
     
-    // Test kartını çevirme fonksiyonu (Kartın kendisine onclick eklendi)
-    function toggleTestFlip(card) {
-        const isFlipped = card.getAttribute('data-flipped') === 'true';
-        const front = document.getElementById('test-front');
-        const back = document.getElementById('test-back');
-
-        if (!isFlipped) {
-            front.style.display = 'none';
-            back.style.display = 'block';
-            card.setAttribute('data-flipped', 'true');
-            card.style.borderLeftColor = '#007bff';
+    // Test kartı detaylarını göster/gizle
+    function toggleTestDetails() {
+        const details = document.getElementById('test-details');
+        const button = document.querySelector('#test-controls button:first-child');
+        
+        if (details.style.display === 'none' || details.style.display === '') {
+            details.style.display = 'block';
+            button.textContent = 'Cevabı Gizle';
+            button.style.backgroundColor = '#f0ad4e';
         } else {
-            // Testte tekrar çevirmeye izin vermeyebiliriz, sadece bir kere gösterilir. 
-            // Ancak eğitim amaçlı tutabiliriz:
-            front.style.display = 'block';
-            back.style.display = 'none';
-            card.setAttribute('data-flipped', 'false');
-            card.style.borderLeftColor = '#dc3545';
+            details.style.display = 'none';
+            button.textContent = 'Cevabı Gör';
+            button.style.backgroundColor = '#ffc107';
         }
     }
 
     // Sonraki test kelimesine geç
     function nextTestWord(isCorrect) {
         if (currentTestIndex < testWords.length) {
-            // Eğer kart çevrilmediyse, kullanıcının önce cevabı görmesini zorlayabiliriz (isteğe bağlı)
-            if (document.getElementById('current-test-card').getAttribute('data-flipped') === 'false' && !isCorrect) {
-                 // Sadece yanlış tuşuna basıldığında zorla
-                 // Bu adımda zorlamayalım, sadece kayda geçelim
-            }
-
             testWords[currentTestIndex].correct = isCorrect;
             currentTestIndex++;
             renderTestCard();
         }
     }
 
-    // Test sonuçlarını göster
+    // Test sonuçlarını göster (Kodu kısaltmak için aynen bırakıldı)
     function showTestResults() {
         document.getElementById('test-container').style.display = 'none';
         const resultsContainer = document.getElementById('test-results-container');
@@ -389,9 +513,9 @@
         }
     }
 
-    // Sayfa yüklendiğinde varsayılan seviyeyi (B2) yükle
+    // Sayfa yüklendiğinde varsayılanı göster
     document.addEventListener('DOMContentLoaded', () => {
-        loadWords('B2');
+        displayWords();
     });
 
 </script>
