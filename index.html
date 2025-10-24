@@ -52,7 +52,7 @@
         .menu button:last-child:hover { background-color: #0056b3; }
         .test-controls button:nth-child(2) { background-color: #28a745; } /* Biliyorum */
         .test-controls button:nth-child(3) { background-color: #dc3545; } /* Bilmiyorum */
-        .test-controls button:nth-child(1) { background-color: #ffc107; color: #333; } /* Anlamı Gör */
+        .test-controls button:nth-child(1) { background-color: #ffc107; color: #333; } /* Cevabı Gör */
         select {
             background-color: #e9ecef;
             color: #333;
@@ -64,39 +64,51 @@
 
         /* KART STİLLERİ */
         .card {
-            border-left: 5px solid #007bff;
+            border-left: 5px solid #dc3545; /* Varsayılan: Türkçe-İngilizce çeviri */
             display: none;
-        }
-        .card h2 {
-            margin-top: 0;
-            color: #007bff;
-            font-size: 1.4em;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        .card p {
-            font-size: 1em;
-            margin: 8px 0;
-        }
-        .card .meaning, .card .example {
-            padding: 10px 0;
-            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
         .card.active {
             display: block;
         }
-        .card .meaning p, .card .example p {
-            font-size: 0.9em;
-            color: #555;
-            padding-left: 10px;
+        .card:hover {
+            background-color: #f8f9fa;
         }
-        .card .meaning strong, .card .example strong {
-            color: #333;
+        .card h2 {
+            margin-top: 0;
+            color: #dc3545;
+            font-size: 1.4em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .card h2.english-word {
+            color: #007bff;
+        }
+
+        /* YENİ FLIP MODU İÇİN KART YAPISI */
+        .front-content {
+            /* Başlangıçta gösterilen (Türkçe) */
             display: block;
-            margin-top: 5px;
+            min-height: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #333;
         }
-        .card .example em {
+        .back-content {
+            /* Başlangıçta gizlenen (İngilizce ve Detaylar) */
+            display: none;
+            border-top: 1px dashed #ccc;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        .back-content p {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+        .back-content em {
             font-style: italic;
+            color: #6c757d;
         }
 
         /* SONUÇ STİLLERİ */
@@ -137,10 +149,9 @@
         </div>
 
     <div id="test-container">
-        <div id="current-test-card" class="card active">
+        <div id="current-test-card" class="card active" onclick="toggleTestFlip(this)">
             </div>
         <div id="test-controls" class="test-controls">
-            <button onclick="toggleMeaning()">Anlamı/Örneği Gör</button>
             <button onclick="nextTestWord(true)">Biliyorum (✅)</button>
             <button onclick="nextTestWord(false)">Bilmiyorum (❌)</button>
         </div>
@@ -162,7 +173,7 @@
     let currentTestIndex = 0;
     const TEST_SIZE = 50;
 
-    // JSON dosya isimleri ve seviye eşleştirmesi (B1 ve B2 artık ayrı)
+    // JSON dosya isimleri ve seviye eşleştirmesi
     const fileMap = {
         'A1': { file: 'a1_kelimeler.json', seviye: 'A1' },
         'A2': { file: 'a2_kelimeler.json', seviye: 'A2' },
@@ -172,7 +183,6 @@
 
     /**
      * JSON dosyalarından kelimeleri asenkron olarak yükler.
-     * @param {string} seviye - 'A1', 'A2', 'B1', 'B2' veya 'all'
      */
     async function fetchWords(seviye) {
         if (seviye === 'all') {
@@ -200,7 +210,6 @@
 
     // Kelime listesi görünümünü yükle
     async function loadWords(seviye) {
-        // Arayüzü ayarla
         document.getElementById('test-container').style.display = 'none';
         document.getElementById('test-results-container').style.display = 'none';
         const container = document.getElementById('word-cards-container');
@@ -211,7 +220,7 @@
         renderWordCards(currentWords, seviye);
     }
 
-    // Kelime kartlarını HTML'e basma (Liste görünümü)
+    // Kelime kartlarını HTML'e basma (Flip Modu - Türkçe > İngilizce)
     function renderWordCards(words, seviye) {
         const container = document.getElementById('word-cards-container');
         container.innerHTML = `<p style="text-align:center; font-weight:bold; color: #5cb85c;">${seviye === 'all' ? 'Tüm Seviyelerde' : seviye + ' Seviyesinde'} Toplam ${words.length} Kelime</p>`;
@@ -221,43 +230,40 @@
             return;
         }
 
-        words.forEach((word, index) => {
+        words.forEach((word) => {
             const card = document.createElement('div');
             card.className = 'card';
             card.style.display = 'block';
+            
+            // Kart içeriği: Başlangıçta Türkçe gösterilir.
             card.innerHTML = `
-                <h2>${word.kelime} <span style="font-size:0.6em; color:#6c757d;">(${word.seviye || seviye})</span></h2>
-                <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
-                <button data-index="${index}" onclick="toggleCardDetails(this)">Anlamı ve Örneği Göster</button>
-                <div id="meaning-${index}" class="meaning" style="display:none;">
-                    <strong>Türkçe Anlam:</strong> <p>${word.anlam}</p>
+                <div class="front-content">
+                    <p><strong>Türkçe:</strong> ${word.anlam}</p>
                 </div>
-                <div id="example-${index}" class="example" style="display:none;">
-                    <strong>Örnek Cümle:</strong> <p><em>${word.ornek_cumle}</em></p>
+                <div class="back-content">
+                    <h2 class="english-word">${word.kelime} <span style="font-size:0.6em; color:#6c757d;">(${word.seviye || seviye})</span></h2>
+                    <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
+                    <p><strong>Örnek Cümle:</strong> <em>${word.ornek_cumle}</em></p>
                 </div>
             `;
+            
+            // Tıklama olayı ile kartı çevirme (İngilizce içeriği göster)
+            card.onclick = function() {
+                const front = this.querySelector('.front-content');
+                const back = this.querySelector('.back-content');
+                
+                if (front.style.display !== 'none') {
+                    front.style.display = 'none';
+                    back.style.display = 'block';
+                    this.style.borderLeftColor = '#007bff';
+                } else {
+                    front.style.display = 'block';
+                    back.style.display = 'none';
+                    this.style.borderLeftColor = '#dc3545';
+                }
+            };
             container.appendChild(card);
         });
-    }
-    
-    // Kelime kartı detaylarını göster/gizle (Liste görünümü için)
-    function toggleCardDetails(button) {
-        const index = button.getAttribute('data-index');
-        const parentCard = button.closest('.card');
-        const meaningDiv = parentCard.querySelector('.meaning');
-        const exampleDiv = parentCard.querySelector('.example');
-        
-        if (meaningDiv.style.display === 'none') {
-            meaningDiv.style.display = 'block';
-            exampleDiv.style.display = 'block';
-            button.textContent = 'Anlamı ve Örneği Gizle';
-            button.style.backgroundColor = '#f0ad4e';
-        } else {
-            meaningDiv.style.display = 'none';
-            exampleDiv.style.display = 'none';
-            button.textContent = 'Anlamı ve Örneği Göster';
-            button.style.backgroundColor = '#ffc107';
-        }
     }
 
     // Rastgele kelime seçme (Test için)
@@ -274,8 +280,6 @@
     // Testi Başlat
     async function startTest() {
         const selectedLevel = document.getElementById('seviye-filtre').value;
-        
-        // Test için kelimeleri yükle
         const wordsForTest = await fetchWords(selectedLevel);
         
         if (wordsForTest.length === 0) {
@@ -294,7 +298,7 @@
         renderTestCard();
     }
 
-    // Test kartını render et
+    // Test kartını render et (Flip Modunda)
     function renderTestCard() {
         if (currentTestIndex >= testWords.length) {
             showTestResults();
@@ -303,44 +307,57 @@
 
         const word = testWords[currentTestIndex];
         const card = document.getElementById('current-test-card');
+        
+        // Test kartı içeriği: Başlangıçta Türkçe gösterilir.
         card.innerHTML = `
-            <h2>${word.kelime} <span style="font-size:0.6em; color:#6c757d;">(${currentTestIndex + 1}/${testWords.length} - ${word.seviye})</span></h2>
-            <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
-            <div id="test-meaning" class="meaning">
-                <strong>Türkçe Anlam:</strong> <p>${word.anlam}</p>
+            <h2 style="color: #007bff;">Kelime Testi <span style="font-size:0.6em; color:#6c757d;">(${currentTestIndex + 1}/${testWords.length} - ${word.seviye})</span></h2>
+            
+            <div id="test-front" class="front-content" style="display: block;">
+                <p style="font-size: 1.1em;">Türkçe Anlamı Nedir?</p>
+                <p style="color: #dc3545; font-size: 1.5em;"><strong>${word.anlam}</strong></p>
             </div>
-            <div id="test-example" class="example">
-                <strong>Örnek Cümle:</strong> <p><em>${word.ornek_cumle}</em></p>
+
+            <div id="test-back" class="back-content" style="display: none;">
+                <h2 class="english-word" style="color: #28a745; border: none;">${word.kelime}</h2>
+                <p><strong>Kelime Tipi:</strong> ${word.tip}</p>
+                <p><strong>Örnek Cümle:</strong> <em>${word.ornek_cumle}</em></p>
             </div>
         `;
-        // Her yeni kelimede anlamı gizle ve butonları sıfırla
-        document.getElementById('test-meaning').style.display = 'none';
-        document.getElementById('test-example').style.display = 'none';
-        document.querySelector('#test-controls button:first-child').textContent = 'Anlamı/Örneği Gör';
-        document.querySelector('#test-controls button:first-child').style.backgroundColor = '#ffc107';
+        // Kartı ilk başta "Türkçe görünümünde" ayarla
+        card.setAttribute('data-flipped', 'false');
+        card.style.borderLeftColor = '#dc3545'; 
     }
+    
+    // Test kartını çevirme fonksiyonu (Kartın kendisine onclick eklendi)
+    function toggleTestFlip(card) {
+        const isFlipped = card.getAttribute('data-flipped') === 'true';
+        const front = document.getElementById('test-front');
+        const back = document.getElementById('test-back');
 
-    // Anlamı ve örneği göster/gizle (Test modu için)
-    function toggleMeaning() {
-        const meaning = document.getElementById('test-meaning');
-        const example = document.getElementById('test-example');
-        
-        if (meaning.style.display === 'none') {
-            meaning.style.display = 'block';
-            example.style.display = 'block';
-            document.querySelector('#test-controls button:first-child').textContent = 'Anlamı/Örneği Gizle';
-            document.querySelector('#test-controls button:first-child').style.backgroundColor = '#f0ad4e';
+        if (!isFlipped) {
+            front.style.display = 'none';
+            back.style.display = 'block';
+            card.setAttribute('data-flipped', 'true');
+            card.style.borderLeftColor = '#007bff';
         } else {
-            meaning.style.display = 'none';
-            example.style.display = 'none';
-            document.querySelector('#test-controls button:first-child').textContent = 'Anlamı/Örneği Gör';
-            document.querySelector('#test-controls button:first-child').style.backgroundColor = '#ffc107';
+            // Testte tekrar çevirmeye izin vermeyebiliriz, sadece bir kere gösterilir. 
+            // Ancak eğitim amaçlı tutabiliriz:
+            front.style.display = 'block';
+            back.style.display = 'none';
+            card.setAttribute('data-flipped', 'false');
+            card.style.borderLeftColor = '#dc3545';
         }
     }
 
     // Sonraki test kelimesine geç
     function nextTestWord(isCorrect) {
         if (currentTestIndex < testWords.length) {
+            // Eğer kart çevrilmediyse, kullanıcının önce cevabı görmesini zorlayabiliriz (isteğe bağlı)
+            if (document.getElementById('current-test-card').getAttribute('data-flipped') === 'false' && !isCorrect) {
+                 // Sadece yanlış tuşuna basıldığında zorla
+                 // Bu adımda zorlamayalım, sadece kayda geçelim
+            }
+
             testWords[currentTestIndex].correct = isCorrect;
             currentTestIndex++;
             renderTestCard();
